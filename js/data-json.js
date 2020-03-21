@@ -4,6 +4,7 @@
 
 var xhr = new XMLHttpRequest();                 // Create XMLHttpRequest object
 
+window.addEventListener('load',function(){
 xhr.onload = function () {                       // When readystate changes
   // The following conditional check will not work locally - only on a server
   //if(xhr.status === 200) {                      // If server status was ok
@@ -67,7 +68,7 @@ xhr.onload = function () {                       // When readystate changes
 
 xhr.open('GET', 'data.json', true);        // Prepare the request
 xhr.send(null);                                 // Send the request
-
+});
 // When working locally in Firefox, you may see an error saying that the JSON is not well-formed.
 // This is because Firefox is not reading the correct MIME type (and it can safely be ignored).
 

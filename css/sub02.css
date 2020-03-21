@@ -323,13 +323,13 @@ section .img-wrapper:last-child>i:nth-of-type(4){
     visibility: hidden;
 }
 section .img-wrapper:last-child .img-main{
-    width: 70%;
+    width: 68%;
     border-radius: 20px;
     background: url('../img/lineup/lineup02.jpg') no-repeat center/ cover;
     box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
 }
 section .img-wrapper .img-sub{
-    width: 30%;
+    width: 32%;
     height:100%;
     display: flex;
     flex-wrap: wrap;
@@ -343,7 +343,7 @@ section .img-wrapper .img-sub::-webkit-scrollbar{
     display: none;
 }
 section .img-wrapper .img-sub a{
-    width: 49%;
+    width: 47%;
     border-radius: 10px;
     margin-left: 3px;
     margin-top: 3px;
