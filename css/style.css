@@ -711,6 +711,7 @@ section .video_map .map .location:hover img{
 
 /* footer */
 footer{
+
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
 }
 footer .content{
