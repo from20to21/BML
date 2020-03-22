@@ -215,11 +215,11 @@ section .img-wrapper .img-main .content::-webkit-scrollbar{
 section .img-wrapper .img-main .content h3{
     color:#fff;
     font-weight: 600;
-    font-size: 4rem;
+    font-size: 3rem;
     padding-left: 30px;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 30px;
     word-break: keep-all;
 }
 section .img-wrapper .img-main .content p{
