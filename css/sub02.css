@@ -4,7 +4,7 @@
 /* header */
 
 header{
-    background: url("../img/subbackimg_02.jpg") no-repeat center 150% / cover;
+    background: url("../img/subbackimg_02.jpg") no-repeat center 100% / cover;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
@@ -227,7 +227,7 @@ section .img-wrapper .img-main .content p{
     margin: 0 auto;
     color:#fff;
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
     padding-top: 30px;
     font-family: 'Noto Sans KR', sans-serif;

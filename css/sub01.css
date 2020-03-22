@@ -4,7 +4,7 @@
 /* header */
 
 header{
-    background: url("../img/subbackimg_01.jpg") no-repeat center 150% / cover;
+    background: url("../img/subbackimg_01.jpg") no-repeat center 100% / cover;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
