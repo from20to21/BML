@@ -10,15 +10,65 @@ xhr.onload = function () {                       // When readystate changes
 
     // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
     var firstContent = '';
-
-
+    // var secondContent = '';
+    // var thirdContent = '';
+    // var fourthContent = '';
+    // var body = document.body,
+    //     html = document.documentElement;
+    // var height = Math.max(body.scrollHeight, body.offsetHeight,
+    //     html.clientHeight, html.scrollHeight, html.offsetHeight);
+    // window.addEventListener('scroll', function () {
+    //     console.log(height);
+    //     console.log(scrollY);
+    // })
+    function getCurrentScrollPercentage() {
+        return (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    }
     for (var i = 0; i < responseObject.G2019.length; i++) { // Loop through object
         firstContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
-    // Update the page with the new content
     document.getElementById('img_wrapper').innerHTML += firstContent;
-}
 
+    //     var bln = true;
+
+    //     window.addEventListener('scroll', function () {
+    //         var scrollY = getCurrentScrollPercentage();
+    //         console.log(scrollY);
+    //         if (scrollY > 10 && scrollY < 90 && bln == true) {
+    //             bln = false;
+    //             for (var i = 21; i < 30; i++) { // Loop through object
+    //                 secondContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    //             }
+    //             console.log('a');
+    //         }
+    //         if (scrollY >= 23 && bln == false) {
+    //             bln = true;
+    //             document.getElementById('img_wrapper').innerHTML += secondContent;
+    //         }
+    //         if (scrollY > 30 && scrollY < 45 && bln == true) {
+    //             bln = false;
+    //             for (var i = 31; i < 40; i++) { // Loop through object
+    //                 thirdContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    //             }
+    //         }
+    //         if (scrollY == 45) {
+    //             bln = true;
+    //             document.getElementById('img_wrapper').innerHTML += thirdContent;
+    //         }
+    //         if (scrollY > 45 && bln == true) {
+    //             bln = false;
+    //             for (var i = 41; i < 52; i++) { // Loop through object
+    //                 fourthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    //             }
+    //         }
+    //         if (scrollY == 50) {
+    //             bln = true;
+    //             document.getElementById('img_wrapper').innerHTML += fourthContent;
+    //         }
+    //     });
+    // }
+    // Update the page with the new content
+}
 
 xhr.open('GET', 'data-gallery.json', true);        // Prepare the request
 xhr.send(null);                                 // Send the request
