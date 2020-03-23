@@ -10,9 +10,10 @@ xhr.onload = function () {                       // When readystate changes
 
     // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
     var firstContent = '';
-    // var secondContent = '';
-    // var thirdContent = '';
-    // var fourthContent = '';
+    var secondContent = '';
+    var thirdContent = '';
+    var fourthContent = '';
+    // var fifthContent = '';
     // var body = document.body,
     //     html = document.documentElement;
     // var height = Math.max(body.scrollHeight, body.offsetHeight,
@@ -24,49 +25,41 @@ xhr.onload = function () {                       // When readystate changes
     function getCurrentScrollPercentage() {
         return (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
     }
-    for (var i = 0; i < responseObject.G2019.length; i++) { // Loop through object
+    // for (var i = 0; i < responseObject.G2019.length; i++) { // Loop through object
+    //     firstContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    // }
+    for (var i = 0; i < 20; i++) { // Loop through object
         firstContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
-    document.getElementById('img_wrapper').innerHTML += firstContent;
-
-    //     var bln = true;
-
-    //     window.addEventListener('scroll', function () {
-    //         var scrollY = getCurrentScrollPercentage();
-    //         console.log(scrollY);
-    //         if (scrollY > 10 && scrollY < 90 && bln == true) {
-    //             bln = false;
-    //             for (var i = 21; i < 30; i++) { // Loop through object
-    //                 secondContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
-    //             }
-    //             console.log('a');
-    //         }
-    //         if (scrollY >= 23 && bln == false) {
-    //             bln = true;
-    //             document.getElementById('img_wrapper').innerHTML += secondContent;
-    //         }
-    //         if (scrollY > 30 && scrollY < 45 && bln == true) {
-    //             bln = false;
-    //             for (var i = 31; i < 40; i++) { // Loop through object
-    //                 thirdContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
-    //             }
-    //         }
-    //         if (scrollY == 45) {
-    //             bln = true;
-    //             document.getElementById('img_wrapper').innerHTML += thirdContent;
-    //         }
-    //         if (scrollY > 45 && bln == true) {
-    //             bln = false;
-    //             for (var i = 41; i < 52; i++) { // Loop through object
-    //                 fourthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
-    //             }
-    //         }
-    //         if (scrollY == 50) {
-    //             bln = true;
-    //             document.getElementById('img_wrapper').innerHTML += fourthContent;
-    //         }
-    //     });
+    for (var i = 20; i < 30; i++) { // Loop through object
+        secondContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    }
+    for (var i = 30; i < 40; i++) { // Loop through object
+        thirdContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    }
+    for (var i = 40; i < responseObject.G2019.length; i++) { // Loop through object
+        fourthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+    }
+    // for (var i = 51; i < 52; i++) { // Loop through object
+    //     fifthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     // }
+    document.getElementById('img_wrapper').innerHTML += firstContent;
+    document.getElementById('img_wrapper').innerHTML += secondContent;
+    document.getElementById('img_wrapper').innerHTML += thirdContent;
+    document.getElementById('img_wrapper').innerHTML += fourthContent;
+    document.getElementById('img_wrapper').innerHTML += fifthContent;
+
+    // var bln = true;
+
+    // window.addEventListener('scroll', function () {
+    //     var scrollY = getCurrentScrollPercentage();
+    //     console.log(scrollY);
+    //     if (scrollY > 10 && scrollY < 20 && bln == true) {
+    //         bln = false;
+    //         document.getElementById('img_wrapper').innerHTML += secondContent;
+    //     }
+    // });
+
     // Update the page with the new content
 }
 
