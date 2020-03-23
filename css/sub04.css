@@ -139,8 +139,14 @@ header .top strong{
 
 /* section */
 section{
+    width: 80%;
+    margin: 0 auto;
     position: relative;
 }
+section iframe{
+    padding-top: 80px;
+}
+
 section .ticket_nav{
     width: 600px;
     margin: 130px auto 70px;
