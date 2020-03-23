@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
                     for (j = (5 * i); j < (block * (i + 1)); j++) {
                         if (j == k) {
                             var num = (i + 1) * block - 1;
-                            thumbnail[num].insertAdjacentHTML("afterend", '<div class="extended"><a href=""><i class="fas fa-chevron-left"></i></a><a href=""><i class="fas fa-chevron-right"></i></a><a href=""><i class="fas fa-times"></i></a><img src="../img/trailer/2019_sketch_01.jpg" alt=""></div>');
+                            thumbnail[num].insertAdjacentHTML("afterend", '<div class="extended"><a href=""><i class="fas fa-chevron-left"></i></a><a href=""><i class="fas fa-chevron-right"></i></a><a href=""><i class="fas fa-times"></i></a><img src="../img/trailer/sketch/2019_sketch_01.jpg" alt=""></div>');
                         }
                     }
                 }
@@ -128,3 +128,5 @@ window.addEventListener('load', function () {
         })
     }
 });
+
+        //aside로 세부메뉴 만들어줄까 고민중
