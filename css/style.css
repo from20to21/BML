@@ -1,7 +1,7 @@
 @import url('common.css');
 
 
-/* header */
+/* */
 
 header{
     background: url("../img/backimg_01.jpg") no-repeat center 120% / cover;
@@ -28,25 +28,25 @@ header.bg02{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-header .header__wrapper{
+.header__wrapper{
     height: 600px;
     background: rgba(0,0,0,.5);
 }
-header .header__wrapper nav{
+.header__wrapper nav{
     width: 933px;
     margin: 0 auto;
     padding-top: 80px;
     display: flex; 
     justify-content: flex-end;
 }
-header .header__wrapper nav a{
+.header__wrapper nav a{
     margin-right:30px;
     color: transparent;
     font-weight: bold;
     font-size: 1.5rem;
     position: relative;
 }
-header .header__wrapper nav a:after{
+.header__wrapper nav a:after{
     content: '';
     display: block;
     width: 0%;
@@ -60,15 +60,15 @@ header .header__wrapper nav a:after{
     opacity: 0;
     transition: .5s;
 }
-header .header__wrapper nav a:nth-of-type(1):after{
+.header__wrapper nav a:nth-of-type(1):after{
     width: 100%;
     opacity: 1;
 }
-header .header__wrapper nav a:hover:after{
+.header__wrapper nav a:hover:after{
     width: 100%;
     opacity: 1;
 }
-header .header__wrapper nav a:before{
+.header__wrapper nav a:before{
     content:attr(data-text);
     width:100%; height:100%;
     position: absolute;
@@ -79,28 +79,7 @@ header .header__wrapper nav a:before{
     color:#fff;
     animation: none;
 }
-
-header .header__wrapper .title{
-    width: 933px; 
-    margin:0 auto;
-    color: #fff;
-    padding: 100px;
-}
-header .header__wrapper .title h2{
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 3.333rem;
-    color:#fff;
-}
-header .header__wrapper .title p{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 100;
-    font-size: 2.222rem;
-    padding-bottom: 70px;
-    padding-top: 10px;
-    color:#fff;
-}
-header .header__wrapper strong{
+.header__wrapper strong{
     color: #fff;
     font-weight: bold;
     font-size: 6rem;
@@ -108,8 +87,28 @@ header .header__wrapper strong{
     position: absolute;
     top: 50%; left: 60%;
 }
+.header__title{
+    width: 933px; 
+    margin:0 auto;
+    color: #fff;
+    padding: 100px;
+}
+.header__title h2{
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color:#fff;
+}
+.header__title p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    font-size: 2.222rem;
+    padding-bottom: 70px;
+    padding-top: 10px;
+    color:#fff;
+}
 
-.scroll{
+.header__scroll{
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
     border-radius: 100%;
     width: 47px; height: 47px;
@@ -121,34 +120,33 @@ header .header__wrapper strong{
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: ani01 1s 0s infinite ease-in-out;
+    animation: scrollAni01 1s 0s infinite ease-in-out;
 }
-.scroll img{
+.header__scroll img{
     padding-left: 1px;
-}
-.scroll img:first-child{
     position: absolute;
+}
+.header__scroll img:first-child{
     top: 5px;
     transform: scale(0.9);
-    animation: ani02 1s 0s infinite ease-in-out;
+    animation: scrollAni02 1s 0s infinite ease-in-out;
 }
-.scroll img:last-child{
-    position: absolute;
+.header__scroll img:last-child{
     top: -5px;
     transform: scale(0.8);
-    animation: ani03 1s 0s infinite ease-in-out;
+    animation: scrollAni03 1s 0s infinite ease-in-out;
 }
-@keyframes ani01{
+@keyframes scrollAni01{
     0%{margin: -24px auto;}
     50%{margin: -10px auto;}
     100%{margin: -24px auto;}
 }
-@keyframes ani02{
+@keyframes scrollAni02{
     0%{top:5px}
     50%{top: 10px;}
     100%{top: 5px;}
 }
-@keyframes ani03{
+@keyframes scrollAni03{
     0%{top:-5px}
     50%{top: 0px;}
     100%{top: -5px;}
@@ -156,20 +154,30 @@ header .header__wrapper strong{
 /* header-end */
 
 /* section */
-section .banner{
+.banner__wrapper{
     width: 933px;
     margin: 120px auto 80px;
     display: flex;
     justify-content: space-between;
 }
-section .banner div{
+.banner__wrapper a{
     width: 303px;
     height: 181px;
     border-radius: 20px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
     position: relative;
+    color: #fff;
 }
-section .banner div:after{
+.banner__wrapper a:nth-of-type(1){
+    background: url("../img/ban01.png");
+}
+.banner__wrapper a:nth-of-type(2){
+    background: url("../img/ban02.png");
+}
+.banner__wrapper a:nth-of-type(3){
+    background: url("../img/ban03.png");
+}
+.banner__wrapper a:after{
     content: '';
     width: 303px;
     height: 182px;
@@ -177,35 +185,25 @@ section .banner div:after{
     border-radius: 20px;
     position: absolute;
     z-index: 2;
-    transition: .5s;
-    top: 0; left: 0;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
+    text-align: center;
+    transition: .5s;
 }
-section .banner div a{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    color: #fff;
+.banner__wrapper a strong{
     font-weight: bold;
     font-size: 1.556rem;
-    font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.667rem;
-    position: absolute;
-    top: 50%; left: 50%;
-    z-index: 3;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    opacity: 0;
-    transition: .5s;
-}
-section .banner div a strong{
+    font-family: 'Noto Sans KR', sans-serif;
     position: absolute;
     top: 50%; left: 50%;
     z-index: 3;
     transform: translate(-50%, -60%);
     color: #fff;
+    opacity: 0;
 }
-section .banner div a p{
+.banner__wrapper a p{
     letter-spacing: 0.1rem;
     font-weight: 100;
     font-size: 1rem;
@@ -216,51 +214,44 @@ section .banner div a p{
     z-index: 3;
     transform: translate(-50%, 0);
     color: #fff;
+    opacity: 0;
 }
-section .banner div:hover:after{
+.banner__wrapper a:hover:after{
     opacity: 1;
 }
-section .banner div:hover a{
+.banner__wrapper a:hover strong{
     opacity: 1;
 }
-section .banner div img{
-    border-radius: 20px;
+.banner__wrapper a:hover p{
+    opacity: 1;
 }
 
-section .ticket{
+.ticket__wrapper{
     width: 933px;
     margin: 0px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-/* section .ticket span{
-    width: 2px;
-    height: 41px;
-    background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
-    margin: 0 auto;
-} */
-section .ticket p{
+.ticket__wrapper p{
     font-weight: lighter;
     font-size: 1.667rem;
     color: #f15166;
     margin: 10px 0 8px;
     letter-spacing: 0.5rem;
 }
-section .ticket strong{
+.ticket__wrapper strong{
     font-weight: bold;
     letter-spacing: 0.3rem;
     font-size: 1rem;
     color: #f15166;
 }
-
-section .ticket .btn{
+.ticekt__btn{
     margin-top: 20px;
     text-align: center;
-    /* background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119)); */
     position: relative;
 }
-section .ticket .btn a{
+.ticekt__btn a{
     display: block;
     width: 100%;
     color: #f14e65;
@@ -272,23 +263,29 @@ section .ticket .btn a{
     letter-spacing: .1rem;
     transition: .3s;
 }
-section .ticket .btn a:hover{
+.ticekt__btn a:hover{
     letter-spacing: .8rem;
 }
 
-section .board{
+.board__wrapper{
     width: 933px;
     margin:80px auto;
     display: flex;
     justify-content: space-between;
 }
-section .board>div{
+.board__notice{
     width: 452px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
     position: relative;
     padding-bottom: 0px;
 }
-section .board div:after{
+.board__information{
+    width: 452px;
+    box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
+    position: relative;
+    padding-bottom: 0px;
+}
+.board__notice:after{
     content: '';
     width: 100%;
     height: 100%;
@@ -299,74 +296,73 @@ section .board div:after{
     opacity: 0;
     transition: .5s;
 }
-section .board div:hover:after{
+.board__notice:hover:after{
     opacity: 1;
 }
-section .board div .top{
+.board__information:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border: 2px solid #f14e65;
+    position: absolute;
+    z-index: -1;
+    top: 0; left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.board__information:hover:after{
+    opacity: 1;
+}
+
+.board__title{
     padding-top: 26px;
     padding-left: 25px;
     display: flex;
     justify-content: flex-start;
 }
-section .board div .top strong{
+.board__title strong{
     font-weight: bold;
     font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
-section .board div .top p{
+.board__title p{
     font-weight: lighter;
     padding-top: 4px;
     font-size: 1.1rem;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 5px;
 }
-section .board div .top a{
+.board__title a{
     width: 16px;
     height: 16px;
     padding-top: 10px;
-    margin-left: 250px;
-}
-section .board .information .top a{
     margin-left: 210px;
 }
-section .board div .top span{
+.board__title span{
     display: block;
     width: 16px;
     height: 2px;
     background: #111;
 }
-section .board div .top span:first-child{
+.board__title span:first-child{
     position: absolute;
 }
-section .board div .top span:last-child{
+.board__title span:last-child{
     transform: rotate(90deg);
 }
-section .board .notice{
+.board__notice{
     /* visibility: hidden; */
     animation: none;
     /* margin-top: 100px; */
 }
-/* section .board .notice.active{
-    animation: scrollani 1s forwards;
-}
-@keyframes scrollani{
-    from{
-        visibility: visible;
-        margin-top: 100px;
-    }
-    to{
-        visibility: visible;
-        margin-top: 0;
-    }
-} */
-section .board .notice ul{
+.board__notice ul{
     width: 411px;
     margin: 10px auto;
 }
-section .board div ul li{
+.board__wrapper div ul li{
     padding-bottom: 13px;
 }
-section .board .notice ul li a{
+.board__notice ul li a{
     font-size: 1rem;
     margin-left: 5px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -374,7 +370,7 @@ section .board .notice ul li a{
     letter-spacing: 0.05rem;
     position: relative;
 }
-section .board div ul li .select:after{
+.board__wrapper .select:after{
     content: '';
     width: 8px;
     height: 8px;
@@ -385,32 +381,32 @@ section .board div ul li .select:after{
     opacity: 0;
     transition: .3s; 
 }
-section .board div ul li .select:hover:after{
+.board__wrapper .select:hover:after{
     opacity: 1;
     top: 10px;
 }
-section .board div ul li .pink{
+.board__wrapper .pink{
     letter-spacing: 0;
     font-size: 1.1rem;
     font-weight: bold;
     color: #f14e65;
     margin-left: 0;
 }
-section .board div ul li .blue{
+.board__wrapper .blue{
     font-size: 1.1rem;
     font-weight: bold;
     color: #4075c5;
     margin-left: 0;
 }
-section .board .information ul{
+.board__information ul{
     width: 411px;
     margin: 20px auto;
 }
-section .board .information ul li{
+.board__information ul li{
     padding-bottom: 15px;
     text-align: center;
 }
-section .board .information ul li a{
+.board__information ul li a{
     margin-left: 5px;
     letter-spacing: 0rem;
     position: relative;
@@ -418,52 +414,36 @@ section .board .information ul li a{
     font-weight: bold;
     font-size: 1.2rem;
 }
-section .board .information{
-    /* visibility: hidden; */
+.board__information{
     animation: none;
-    /* margin-top: 100px; */
 }
-/* section .board .information.active{
-    animation: scrollani 1s forwards;
-}
-@keyframes scrollani{
-    from{
-        visibility: visible;
-        margin-top: 100px;
-    }
-    to{
-        visibility: visible;
-        margin-top: 0;
-    }
-} */
-
-section .lineup{
+.lineup_wrapper{
     width: 100%;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
     position: relative;
     overflow: hidden;
 }
-section .lineup div{
+.lineup__textWrapper{
     width: 933px;
     margin: 0 auto;
     padding-top: 36px;
     padding-bottom: 200px;
     margin-bottom: 30px;
 }
-section .lineup div strong{
+.lineup__textWrapper strong{
     font-weight: bold;
     font-size: 1.333rem;
     font-family: 'Noto Sans KR', sans-serif;
     display: inline-block;
 }
-section .lineup div p{
+.lineup__textWrapper p{
     display: inline-block;
     font-weight: lighter;
     font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 1px;
 }
-section .lineup div .seeAll{
+.lineup__textWrapper>a{
     display: inline-block;
     font-weight: lighter;
     font-size: 1rem;
@@ -477,23 +457,21 @@ section .lineup div .seeAll{
     height: 25px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    /* color: #fff; */
-    /* background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119)); */
     position: absolute;
     left: 69%; top: 10%;
     z-index: 3;
 }
-section .lineup div .seeAll:hover{
+.lineup__textWrapper>a:hover{
     border: 1px solid #aaa;
 }
-section .lineup div .seeAll img{
+.lineup__textWrapper>a img{
     width: 8px;
     position: absolute;
     top: 50%;
     right: 3%;
     transform: translate(-50%,-50%);
 }
-section .lineup div #slide{
+.lineup__slider{
     position: absolute;
     top: 15%; left: 0%;
     display: flex;
@@ -501,32 +479,30 @@ section .lineup div #slide{
     justify-content: space-between;
     transition: none;
 }
-
-section .lineup div #slide li{
+.lineup__slider li{
     margin-left:10px;
     width: 153px;
     height: 150px;
     position: relative;
 }
-section .lineup div #slide li a{
+.lineup__slider li a{
     width: 153px;
     height: 150px;
     position: absolute;
     filter: grayscale();
     transition: .5s;
 }
-
-section .lineup div #slide li a:hover{
+.lineup__slider li a:hover{
     filter: none;
 }
 
-section .video_map{
+.video_map{
     width: 933px;
     margin: 100px auto;
     position: relative;
     transition: 1s;
 }
-section .video_map .video{
+.video_map .video{
     width: 649px;
     height: 365px;
     border-radius: 20px;
@@ -535,7 +511,7 @@ section .video_map .video{
     float: left;
     box-shadow: rgba(0,0,0,.5) 6px 5px 20px;
 }
-section .video_map:after{
+.video_map:after{
     content: '';
     display: block;
     clear: both;
@@ -550,7 +526,7 @@ section .video_map:after{
     z-index: -1;
 }
 
-section .video_map .video #playbtn{
+.video_map .video #playbtn{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -562,7 +538,7 @@ section .video_map .video #playbtn{
     opacity: 1;
     transition: opacity .5s;
 }
-section .video_map .video #pausedbtn{
+.video_map .video #pausedbtn{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -574,7 +550,7 @@ section .video_map .video #pausedbtn{
     opacity: 0;
     transition: opacity .5s;
 }
-section .video_map .video a:after{
+.video_map .video a:after{
     content: '';
     width: 100%;
     height: 100%;
@@ -585,7 +561,7 @@ section .video_map .video a:after{
     z-index: 2;
     transform: translate(-50%, -50%);
 }
-section .video_map .video a img{
+.video_map .video a img{
     position: absolute;
     top: 50%; left: 50%;
     z-index: 3;
@@ -593,12 +569,12 @@ section .video_map .video a img{
 }
 
 
-section .video_map .map{
+.video_map .map{
     float: right;
     display: flex;
     flex-direction: column;
 }
-section .video_map .map .see_map{
+.video_map .map .see_map{
     display: inline-block;
     width: 258px;
     height: 203px;
@@ -608,7 +584,7 @@ section .video_map .map .see_map{
     overflow: hidden;
 }
 
-section .video_map .map .see_map a{
+.video_map .map .see_map a{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -623,21 +599,21 @@ section .video_map .map .see_map a{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-section .video_map .map .see_map strong{
+.video_map .map .see_map strong{
     position: absolute;
     top: 50%; left: 50%;
     z-index: 3;
     color: #fff;
     transform: translate(-50%, -50%);
 }
-section .video_map .map .see_map p{
+.video_map .map .see_map p{
     color: #fff;
     letter-spacing: 0.1rem;
     font-weight: 100;
     font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
-section .video_map .map .see_map:after{
+.video_map .map .see_map:after{
     content: '';
     width: 100%;
     height: 100%;
@@ -648,7 +624,7 @@ section .video_map .map .see_map:after{
     z-index: 2;
     transform: translate(-50%, -50%);
 }
-section .video_map .map .see_map img{
+.video_map .map .see_map img{
     position: absolute;
     top: 50%; left: 50%;
     z-index: 1;
@@ -658,11 +634,11 @@ section .video_map .map .see_map img{
     border-radius: 20px;
     transition: transform .5s;
 }
-section .video_map .map .see_map:hover img{
+.video_map .map .see_map:hover img{
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-section .video_map .map .location{
+.video_map .map .location{
     width: 258px;
     height: 154px;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
@@ -671,7 +647,7 @@ section .video_map .map .location{
     position: relative;
     margin-top: 8px;
 }
-section .video_map .map .location a{
+.video_map .map .location a{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -686,14 +662,14 @@ section .video_map .map .location a{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-section .video_map .map .location a strong{
+.video_map .map .location a strong{
     color: #fff;
     position: absolute;
     top: 30%; left: 10%;
     z-index: 3;
     transform: translate(0, 0);
 }
-section .video_map .map .location a p{
+.video_map .map .location a p{
     color: #fff;
     letter-spacing: 0.1rem;
     font-weight: 100;
@@ -705,14 +681,14 @@ section .video_map .map .location a p{
     z-index: 3;
     transform: translate(0, 0);
 }
-section .video_map .map .location img{
+.video_map .map .location img{
     float: right;
     height: 62px;
     padding-top: 38px;
     padding-right: 30px;
     animation: none;
 }
-section .video_map .map .location:hover img{
+.video_map .map .location:hover img{
     animation: wobble2 2s infinite;
 }
 @keyframes wobble2 { 

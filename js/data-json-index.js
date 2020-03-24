@@ -10,8 +10,7 @@ xhr.onload = function () {                       // When readystate changes
 
     // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
     var firstContent = '';
-    var slide = document.getElementById('slide');
-    var smallImg = slide.querySelectorAll('a img');
+    var slide = document.querySelector(".lineup__slider");
 
     for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
         if (i < 10) {
@@ -30,8 +29,34 @@ xhr.onload = function () {                       // When readystate changes
         }
     }
     // Update the page with the new content
-    document.getElementById('slide').innerHTML = firstContent;
-
+    slide.innerHTML = firstContent;
+    slide.style.left = 0 + "%";
+    var a = 0;
+    var bln = false;
+    slide.addEventListener("mouseenter", function (e) {
+        e.stopPropagation();
+        bln = true;
+    });
+    slide.addEventListener("mouseleave", function () {
+        bln = false;
+        slidework();
+    });
+    function slideimg() {
+        if (a < -171.4) {
+            a = 0;
+        } else {
+            a -= 0.02856667;
+            slide.style.left = a + "%";
+        }
+        if (bln == true) {
+            clearInterval(move);
+        }
+    }
+    var move;
+    function slidework() {
+        move = setInterval(slideimg, 20);
+    }
+    slidework();
 };
 
 xhr.open('GET', 'sub/data.json', true);        // Prepare the request
