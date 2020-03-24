@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
     var emoticon_s = wrapper_first[0].querySelector('i');
     var info_f = mainimg[0].querySelector('a');
     var info_s = mainimg[1].querySelector('a');
-    console.log(info_f);
+
     if (hash) {
         var href = window.location.href;
         var hrefNum = parseInt(href.substr(href.length - 2));
@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
         var imgname_s = wrapper_second[hrefNum].style.backgroundImage;
         emoticon_f = wrapper_first[hrefNum].querySelector('i');
         emoticon_s = wrapper_second[hrefNum].querySelector('i');
-
+        console.log('a');
         if (hrefDay == 'f') {
             window.scrollTo({ top: locationFirst, behavior: 'smooth' });
             sub_first.scrollTo({ top: sublocationFirst, behavior: 'smooth' });
