@@ -10,7 +10,9 @@ window.addEventListener('load', function () {
     var hash = location.hash;
     var emoticon_f = wrapper_first[0].querySelector('i');
     var emoticon_s = wrapper_first[0].querySelector('i');
-
+    var info_f = mainimg[0].querySelector('a');
+    var info_s = mainimg[1].querySelector('a');
+    console.log(info_f);
     if (hash) {
         var href = window.location.href;
         var hrefNum = parseInt(href.substr(href.length - 2));
@@ -41,7 +43,8 @@ window.addEventListener('load', function () {
     for (var i = 0; i < wrapper_first.length; i++) {
         wrapper_first[i].addEventListener('click', function (e) {
             e.preventDefault();
-            content_first.style.opacity = 0;
+            info_f.style.display = "block";
+            content_first.classList.remove('active');
             emoticon_f.classList.remove('active');
             var emoticon2 = this.querySelector('i');
             for (var j = 0; j < wrapper_first.length; j++) {
@@ -51,36 +54,31 @@ window.addEventListener('load', function () {
             emoticon2.classList.add('active');
             var imgname = this.style.backgroundImage;
             mainimg[0].style = "background:" + imgname + " no-repeat center / cover;";
-            mainimg[0].addEventListener('mouseover', function () {
-                content_first.style.opacity = 1;
-            })
-            mainimg[0].addEventListener('mouseleave', function () {
-                content_first.style.opacity = 0;
-            })
         })
     }
-
+    info_f.addEventListener('click', function (e) {
+        e.preventDefault();
+        content_first.classList.toggle('active');
+    })
 
     for (var i = 0; i < wrapper_second.length; i++) {
         wrapper_second[i].addEventListener('click', function (e) {
             e.preventDefault();
-            content_second.style.opacity = 0;
+            info_s.style.display = "block";
+            content_second.classList.remove('active');
             emoticon_s.classList.remove('active');
             var emoticon2 = this.querySelector('i');
-            for (var j = 0; j < wrapper_first.length; j++) {
-                var emoticon3 = sub_first.querySelectorAll('i');
+            for (var j = 0; j < wrapper_second.length; j++) {
+                var emoticon3 = sub_second.querySelectorAll('i');
                 emoticon3[j].classList.remove('active');
             }
             emoticon2.classList.add('active');
             var imgname = this.style.backgroundImage;
             mainimg[1].style = "background:" + imgname + " no-repeat center / cover;";
-            mainimg[1].addEventListener('mouseover', function () {
-                content_second.style.opacity = 1;
-            })
-            mainimg[1].addEventListener('mouseleave', function () {
-                content_second.style.opacity = 0;
-            })
         })
-
     }
+    info_s.addEventListener('click', function (e) {
+        e.preventDefault();
+        content_second.classList.toggle('active');
+    })
 });
