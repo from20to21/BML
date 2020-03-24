@@ -29,14 +29,14 @@ window.addEventListener('load', function () {
             window.scrollTo({ top: locationFirst, behavior: 'smooth' });
             sub_first.scrollTo({ top: sublocationFirst, behavior: 'smooth' });
             mainimg[0].style = "background:" + imgname_f + " no-repeat center / cover;";
-            content_first.style.opacity = 1;
+            content_first.classList.add('active');
             emoticon_f.classList.add('active');
         }
         if (hrefDay == 's') {
             window.scrollTo({ top: locationSecond, behavior: 'smooth' });
             sub_second.scrollTo({ top: sublocationFirst, behavior: 'smooth' });
             mainimg[1].style = "background:" + imgname_s + " no-repeat center / cover;";
-            content_second.style.opacity = 1;
+            content_second.classList.add('active');
             emoticon_s.classList.add('active');
         }
     }
