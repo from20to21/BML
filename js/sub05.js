@@ -62,7 +62,6 @@ window.addEventListener('load', function () {
             extendimg = extend.querySelector('img');
 
             url = this.style.backgroundImage;
-
             if (url == lasturl) { //같은애 클릭하면 닫히게
                 close();
             }

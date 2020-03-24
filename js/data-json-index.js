@@ -12,7 +12,6 @@ xhr.onload = function () {                       // When readystate changes
     var firstContent = '';
     var slide = document.getElementById('slide');
     var smallImg = slide.querySelectorAll('a img');
-    console.log(smallImg);
 
     for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
         if (i < 10) {

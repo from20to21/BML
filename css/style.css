@@ -28,25 +28,25 @@ header.bg02{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-header .top{
+header .header__wrapper{
     height: 600px;
     background: rgba(0,0,0,.5);
 }
-header .top nav{
+header .header__wrapper nav{
     width: 933px;
     margin: 0 auto;
     padding-top: 80px;
     display: flex; 
     justify-content: flex-end;
 }
-header .top nav a{
+header .header__wrapper nav a{
     margin-right:30px;
     color: transparent;
     font-weight: bold;
     font-size: 1.5rem;
     position: relative;
 }
-header .top nav a:after{
+header .header__wrapper nav a:after{
     content: '';
     display: block;
     width: 0%;
@@ -60,15 +60,15 @@ header .top nav a:after{
     opacity: 0;
     transition: .5s;
 }
-header .top nav a:nth-of-type(1):after{
+header .header__wrapper nav a:nth-of-type(1):after{
     width: 100%;
     opacity: 1;
 }
-header .top nav a:hover:after{
+header .header__wrapper nav a:hover:after{
     width: 100%;
     opacity: 1;
 }
-header .top nav a:before{
+header .header__wrapper nav a:before{
     content:attr(data-text);
     width:100%; height:100%;
     position: absolute;
@@ -80,19 +80,19 @@ header .top nav a:before{
     animation: none;
 }
 
-header .top .title{
+header .header__wrapper .title{
     width: 933px; 
     margin:0 auto;
     color: #fff;
     padding: 100px;
 }
-header .top .title h2{
+header .header__wrapper .title h2{
     font-weight: bold;
     font-size: 3rem;
     line-height: 3.333rem;
     color:#fff;
 }
-header .top .title p{
+header .header__wrapper .title p{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 100;
     font-size: 2.222rem;
@@ -100,7 +100,7 @@ header .top .title p{
     padding-top: 10px;
     color:#fff;
 }
-header .top strong{
+header .header__wrapper strong{
     color: #fff;
     font-weight: bold;
     font-size: 6rem;

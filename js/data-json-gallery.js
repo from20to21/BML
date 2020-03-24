@@ -47,7 +47,7 @@ xhr.onload = function () {                       // When readystate changes
     document.getElementById('img_wrapper').innerHTML += secondContent;
     document.getElementById('img_wrapper').innerHTML += thirdContent;
     document.getElementById('img_wrapper').innerHTML += fourthContent;
-    document.getElementById('img_wrapper').innerHTML += fifthContent;
+    // document.getElementById('img_wrapper').innerHTML += fifthContent;
 
 
     // if (window.scrollY >= (thumbnail[10].offsetTop - 400) && window.scrollY <= (thumbnail[10].offsetTop - 390) && bln == false) {
