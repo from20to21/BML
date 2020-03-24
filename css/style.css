@@ -471,7 +471,7 @@ section .lineup div .seeAll{
     margin-left: 5px;
     text-align: center;
     padding-top: 7px;
-    padding-left:3px;
+    padding-left:2px;
     padding-right:10px;
     width : 80px;
     height: 25px;
@@ -482,6 +482,9 @@ section .lineup div .seeAll{
     position: absolute;
     left: 69%; top: 10%;
     z-index: 3;
+}
+section .lineup div .seeAll:hover{
+    border: 1px solid #aaa;
 }
 section .lineup div .seeAll img{
     width: 8px;
