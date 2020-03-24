@@ -16,8 +16,8 @@ window.addEventListener('load', function () {
     if (hash) {
         var href = window.location.href;
         var hrefNum = parseInt(href.substr(href.length - 2));
-        console.log(hrefNum);
         var hrefDay = hash.charAt(1);
+        console.log(hrefDay);
         var locationFirst = wrapper[0].offsetTop - 300;
         var locationSecond = wrapper[1].offsetTop - 300;
         var sublocationFirst = wrapper_first[hrefNum].offsetTop;
