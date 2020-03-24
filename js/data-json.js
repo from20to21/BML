@@ -13,7 +13,7 @@ xhr.onload = function () {                       // When readystate changes
   var firstContent = '';
   var href = window.location.href;
   var hrefNum = parseInt(href.substr(href.length - 2));
-  var hrefDay = href.charAt(37);
+  var hrefDay = hash.charAt(1);
 
   for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
     firstContent += '<a href="" style = "background: url(../' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>'
