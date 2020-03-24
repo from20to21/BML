@@ -9,132 +9,9 @@ header{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-header .top{
-    height: 600px;
-    background: rgba(0,0,0,.5);
-}
-header .top nav{
-    width: 933px;
-    margin: 0 auto;
-    padding-top: 80px;
-    display: flex; 
-    justify-content: flex-end;
-}
-header .top nav a{
-    margin-right:30px;
-    color: transparent;
-    font-weight: bold;
-    font-size: 1.5rem;
-    position: relative;
-}
-header .top nav a:after{
-    content: '';
-    display: block;
-    width: 0%;
-    height: 120%;
-    background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
-    border-radius: 10px;
-    position: absolute;
-    top: 50%; left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    opacity: 0;
-    transition: .5s;
-}
-header .top nav a:nth-of-type(3):after{
+.header__wrapper nav a:nth-of-type(3):after{
     width: 100%;
     opacity: 1;
-}
-header .top nav a:hover:after{
-    width: 100%;
-    opacity: 1;
-}
-header .top nav a:before{
-    content:attr(data-text);
-    width:100%; height:100%;
-    position: absolute;
-    top: 50%; left:50%;
-    transform: translate(-37%, -37%);
-    z-index:2;
-    font-size: 1.1rem;
-    color:#fff;
-    animation: none;
-}
-
-header .top .title{
-    width: 933px; 
-    margin:0 auto;
-    color: #fff;
-    padding: 160px 0;
-    text-align: center;
-}
-header .top .title h2{
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 3.333rem;
-    color:#fff;
-}
-header .top .title p{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 100;
-    font-size: 2.222rem;
-    padding-bottom: 70px;
-    padding-top: 10px;
-    color:#fff;
-    letter-spacing: .1rem;
-}
-header .top strong{
-    color: #fff;
-    font-weight: bold;
-    font-size: 6rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    position: absolute;
-    top: 50%; left: 60%;
-}
-
-.scroll{
-    background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
-    border-radius: 100%;
-    width: 47px; height: 47px;
-    margin: -24px auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: ani01 1s 0s infinite ease-in-out;
-}
-.scroll img{
-    padding-left: 1px;
-}
-.scroll img:first-child{
-    position: absolute;
-    top: 5px;
-    transform: scale(0.9);
-    animation: ani02 1s 0s infinite ease-in-out;
-}
-.scroll img:last-child{
-    position: absolute;
-    top: -5px;
-    transform: scale(0.8);
-    animation: ani03 1s 0s infinite ease-in-out;
-}
-@keyframes ani01{
-    0%{margin: -24px auto;}
-    50%{margin: -10px auto;}
-    100%{margin: -24px auto;}
-}
-@keyframes ani02{
-    0%{top:5px}
-    50%{top: 10px;}
-    100%{top: 5px;}
-}
-@keyframes ani03{
-    0%{top:-5px}
-    50%{top: 0px;}
-    100%{top: -5px;}
 }
 /* header-end */
 
@@ -196,20 +73,20 @@ section .img-wrapper .img-main{
     box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
     position: relative;
 }
-section .img-wrapper .img-main a{
+section .img-wrapper:nth-of-type(1) .img-main a{
     position: absolute;
     top: 3%; left: 2%;
     z-index: 30;
     display: none;
 }
-section .img-wrapper:last-child .img-main a{
+section .img-wrapper:nth-of-type(2) .img-main a{
     position: absolute;
     top: 3%; right: 2%;
     z-index: 30;
     display: none;
 }
 section .img-wrapper .img-main a img{
-    width: 35px;
+    width: 25px;
 }
 section .img-wrapper .img-main .content{
     width: 100%;
@@ -442,30 +319,6 @@ section .img-wrapper .img-sub a:hover i::before{
 }
 
 /* section-end */
-
-/* footer */
-footer{
-    box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
-}
-footer .content{
-    padding: 30px 0;
-    width: 933px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-footer .conten>img{
-    width: 198px;
-}
-footer .content .sns{
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-}
-footer .content .sns img{
-    width: 37px;
-}
-/* footer-end */
 
 @media (max-width:1024px){}
 

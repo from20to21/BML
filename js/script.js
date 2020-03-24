@@ -22,7 +22,7 @@ setInterval(showSlides, 3000);
 //배경변경 end
 
 // 비디오
-var video = document.getElementById("video");
+var video = document.querySelector("video");
 var play = document.getElementById("playbtn");
 var pause = document.getElementById("pausebtn");
 

@@ -28,56 +28,9 @@ header.bg02{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-.header__wrapper{
-    height: 600px;
-    background: rgba(0,0,0,.5);
-}
-.header__wrapper nav{
-    width: 933px;
-    margin: 0 auto;
-    padding-top: 80px;
-    display: flex; 
-    justify-content: flex-end;
-}
-.header__wrapper nav a{
-    margin-right:30px;
-    color: transparent;
-    font-weight: bold;
-    font-size: 1.5rem;
-    position: relative;
-}
-.header__wrapper nav a:after{
-    content: '';
-    display: block;
-    width: 0%;
-    height: 120%;
-    background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
-    border-radius: 10px;
-    position: absolute;
-    top: 50%; left:50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    opacity: 0;
-    transition: .5s;
-}
 .header__wrapper nav a:nth-of-type(1):after{
     width: 100%;
     opacity: 1;
-}
-.header__wrapper nav a:hover:after{
-    width: 100%;
-    opacity: 1;
-}
-.header__wrapper nav a:before{
-    content:attr(data-text);
-    width:100%; height:100%;
-    position: absolute;
-    top: 50%; left:50%;
-    transform: translate(-37%, -37%);
-    z-index:2;
-    font-size: 1.1rem;
-    color:#fff;
-    animation: none;
 }
 .header__wrapper strong{
     color: #fff;
@@ -92,64 +45,7 @@ header.bg02{
     margin:0 auto;
     color: #fff;
     padding: 100px;
-}
-.header__title h2{
-    font-weight: bold;
-    font-size: 3rem;
-    line-height: 3.5rem;
-    color:#fff;
-}
-.header__title p{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 100;
-    font-size: 2.222rem;
-    padding-bottom: 70px;
-    padding-top: 10px;
-    color:#fff;
-}
-
-.header__scroll{
-    background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
-    border-radius: 100%;
-    width: 47px; height: 47px;
-    margin: -24px auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: scrollAni01 1s 0s infinite ease-in-out;
-}
-.header__scroll img{
-    padding-left: 1px;
-    position: absolute;
-}
-.header__scroll img:first-child{
-    top: 5px;
-    transform: scale(0.9);
-    animation: scrollAni02 1s 0s infinite ease-in-out;
-}
-.header__scroll img:last-child{
-    top: -5px;
-    transform: scale(0.8);
-    animation: scrollAni03 1s 0s infinite ease-in-out;
-}
-@keyframes scrollAni01{
-    0%{margin: -24px auto;}
-    50%{margin: -10px auto;}
-    100%{margin: -24px auto;}
-}
-@keyframes scrollAni02{
-    0%{top:5px}
-    50%{top: 10px;}
-    100%{top: 5px;}
-}
-@keyframes scrollAni03{
-    0%{top:-5px}
-    50%{top: 0px;}
-    100%{top: -5px;}
+    text-align: left;
 }
 /* header-end */
 
@@ -496,13 +392,18 @@ header.bg02{
     filter: none;
 }
 
-.video_map{
+.video_map__wrapper{
     width: 933px;
     margin: 100px auto;
     position: relative;
     transition: 1s;
 }
-.video_map .video{
+.video_map__wrapper:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.video__wrapper{
     width: 649px;
     height: 365px;
     border-radius: 20px;
@@ -511,12 +412,7 @@ header.bg02{
     float: left;
     box-shadow: rgba(0,0,0,.5) 6px 5px 20px;
 }
-.video_map:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-#video{
+video{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -526,7 +422,7 @@ header.bg02{
     z-index: -1;
 }
 
-.video_map .video #playbtn{
+.video__wrapper #playbtn{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -538,7 +434,7 @@ header.bg02{
     opacity: 1;
     transition: opacity .5s;
 }
-.video_map .video #pausedbtn{
+.video__wrapper #pausedbtn{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -550,7 +446,7 @@ header.bg02{
     opacity: 0;
     transition: opacity .5s;
 }
-.video_map .video a:after{
+.video__wrapper a:after{
     content: '';
     width: 100%;
     height: 100%;
@@ -561,7 +457,7 @@ header.bg02{
     z-index: 2;
     transform: translate(-50%, -50%);
 }
-.video_map .video a img{
+.video__wrapper a img{
     position: absolute;
     top: 50%; left: 50%;
     z-index: 3;
@@ -569,12 +465,12 @@ header.bg02{
 }
 
 
-.video_map .map{
+.map__wrapper{
     float: right;
     display: flex;
     flex-direction: column;
 }
-.video_map .map .see_map{
+.map__seeMap{
     display: inline-block;
     width: 258px;
     height: 203px;
@@ -584,7 +480,7 @@ header.bg02{
     overflow: hidden;
 }
 
-.video_map .map .see_map a{
+.map__seeMap a{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -599,21 +495,21 @@ header.bg02{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.video_map .map .see_map strong{
+.map__seeMap strong{
     position: absolute;
     top: 50%; left: 50%;
     z-index: 3;
     color: #fff;
     transform: translate(-50%, -50%);
 }
-.video_map .map .see_map p{
+.map__seeMap p{
     color: #fff;
     letter-spacing: 0.1rem;
     font-weight: 100;
     font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.video_map .map .see_map:after{
+.map__seeMap:after{
     content: '';
     width: 100%;
     height: 100%;
@@ -624,7 +520,7 @@ header.bg02{
     z-index: 2;
     transform: translate(-50%, -50%);
 }
-.video_map .map .see_map img{
+.map__seeMap img{
     position: absolute;
     top: 50%; left: 50%;
     z-index: 1;
@@ -634,11 +530,11 @@ header.bg02{
     border-radius: 20px;
     transition: transform .5s;
 }
-.video_map .map .see_map:hover img{
+.map__seeMap:hover img{
     transform: translate(-50%, -50%) scale(1.2);
 }
 
-.video_map .map .location{
+.map_location{
     width: 258px;
     height: 154px;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
@@ -647,7 +543,7 @@ header.bg02{
     position: relative;
     margin-top: 8px;
 }
-.video_map .map .location a{
+.map_location a{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -662,14 +558,14 @@ header.bg02{
     transform: translate(-50%, -50%);
     text-align: center;
 }
-.video_map .map .location a strong{
+.map_location a strong{
     color: #fff;
     position: absolute;
     top: 30%; left: 10%;
     z-index: 3;
     transform: translate(0, 0);
 }
-.video_map .map .location a p{
+.map_location a p{
     color: #fff;
     letter-spacing: 0.1rem;
     font-weight: 100;
@@ -681,14 +577,14 @@ header.bg02{
     z-index: 3;
     transform: translate(0, 0);
 }
-.video_map .map .location img{
+.map_location img{
     float: right;
     height: 62px;
     padding-top: 38px;
     padding-right: 30px;
     animation: none;
 }
-.video_map .map .location:hover img{
+.map_location:hover img{
     animation: wobble2 2s infinite;
 }
 @keyframes wobble2 { 
@@ -701,30 +597,7 @@ header.bg02{
 
 /* section-end */
 
-/* footer */
-footer{
 
-    box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
-}
-footer .content{
-    padding: 30px 0;
-    width: 933px;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-}
-footer .conten>img{
-    width: 198px;
-}
-footer .content .sns{
-    width: 150px;
-    display: flex;
-    justify-content: space-between;
-}
-footer .content .sns img{
-    width: 37px;
-}
-/* footer-end */
 
 @media (max-width:1024px){}
 
