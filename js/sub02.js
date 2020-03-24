@@ -17,7 +17,6 @@ window.addEventListener('load', function () {
         var href = window.location.href;
         var hrefNum = parseInt(href.substr(href.length - 2));
         var hrefDay = hash.charAt(1);
-        console.log(hrefDay);
         var locationFirst = wrapper[0].offsetTop - 300;
         var locationSecond = wrapper[1].offsetTop - 300;
         var sublocationFirst = wrapper_first[hrefNum].offsetTop;
@@ -31,6 +30,7 @@ window.addEventListener('load', function () {
             mainimg[0].style = "background:" + imgname_f + " no-repeat center / cover;";
             content_first.classList.add('active');
             emoticon_f.classList.add('active');
+            info_f.style.display = "block";
         }
         if (hrefDay == 's') {
             window.scrollTo({ top: locationSecond, behavior: 'smooth' });
@@ -38,6 +38,7 @@ window.addEventListener('load', function () {
             mainimg[1].style = "background:" + imgname_s + " no-repeat center / cover;";
             content_second.classList.add('active');
             emoticon_s.classList.add('active');
+            info_s.style.display = "block";
         }
     }
     for (var i = 0; i < wrapper_first.length; i++) {
