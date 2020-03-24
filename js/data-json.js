@@ -41,8 +41,12 @@ xhr.onload = function () {                       // When readystate changes
       insta_first.innerHTML = responseObject.first[i].instagram;
     })
   }
-  if (hrefDay == 'f') {
 
+  if (hrefDay == 'f') {
+    h3_first.innerHTML = responseObject.first[hrefNum].name;
+    text_first.innerHTML = responseObject.first[hrefNum].text;
+    fb_first.innerHTML = responseObject.first[hrefNum].facebook;
+    insta_first.innerHTML = responseObject.first[hrefNum].instagram;
   }
 
   //}
@@ -68,6 +72,10 @@ xhr.onload = function () {                       // When readystate changes
       fb_second.innerHTML = responseObject.second[i].facebook;
       insta_second.innerHTML = responseObject.second[i].instagram;
     })
+  }
+  var locationSecond = wrapper[1].offsetTop - 300;
+  if (hrefDay == 's') {
+    window.scrollTo({ top: locationSecond, behavior: 'smooth' });
   }
 
 };

@@ -219,7 +219,7 @@ section .img-wrapper .img-main .content h3{
     padding-left: 30px;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 5vw;
     word-break: keep-all;
 }
 section .img-wrapper .img-main .content p{
@@ -366,6 +366,31 @@ section .img-wrapper .img-sub i{
     color: #fff;
     font-size: 2rem;
     opacity: 0;
+}
+section .img-wrapper .img-sub a i.active{
+    width: 130%;
+    height: 130%;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 1;
+    transition: 1s;
+}
+section .img-wrapper .img-sub a i.active::before{
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    transition: none;
+    animation: searchani 1s 0s infinite ease-in-out;
 }
 section .img-wrapper .img-sub a:hover i{
     width: 130%;
