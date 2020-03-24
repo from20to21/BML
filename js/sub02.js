@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
     var content_second = wrapper[1].querySelector('.img-main .content');
     var mainimg = document.querySelectorAll('.img-wrapper .img-main');
 
+
     for (var i = 0; i < wrapper_first.length; i++) {
         wrapper_first[i].addEventListener('click', function (e) {
             e.preventDefault();

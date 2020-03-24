@@ -15,10 +15,20 @@ xhr.onload = function () {                       // When readystate changes
     console.log(smallImg);
 
     for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
-        firstContent += '<li><a href=""style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+        if (i < 10) {
+            firstContent += '<li><a href="sub/sub02.html#f0' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+        }
+        else {
+            firstContent += '<li><a href="sub/sub02.html#f' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+        }
     }
     for (var i = 0; i < responseObject.second.length; i++) { // Loop through object
-        firstContent += '<li><a href=""style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+        if (i < 10) {
+            firstContent += '<li><a href="sub/sub02.html#s0' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+        }
+        else {
+            firstContent += '<li><a href="sub/sub02.html#s' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+        }
     }
     // Update the page with the new content
     document.getElementById('slide').innerHTML = firstContent;

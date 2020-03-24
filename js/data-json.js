@@ -11,7 +11,11 @@ xhr.onload = function () {                       // When readystate changes
 
   // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
   var firstContent = '';
-
+  var href = window.location.href;
+  var hrefNum = parseInt(href.substr(href.length - 2));
+  var hrefDay = href.charAt(37);
+  console.log(hrefNum);
+  console.log(hrefDay);
 
   for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
     firstContent += '<a href="" style = "background: url(' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>'
@@ -36,6 +40,9 @@ xhr.onload = function () {                       // When readystate changes
       fb_first.innerHTML = responseObject.first[i].facebook;
       insta_first.innerHTML = responseObject.first[i].instagram;
     })
+  }
+  if (hrefDay == 'f') {
+
   }
 
   //}
