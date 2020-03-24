@@ -13,6 +13,7 @@ xhr.onload = function () {                       // When readystate changes
   var firstContent = '';
   var href = window.location.href;
   var hrefNum = parseInt(href.substr(href.length - 2));
+  var hash = location.hash;
   var hrefDay = hash.charAt(1);
 
   for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
