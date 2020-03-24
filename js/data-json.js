@@ -14,8 +14,6 @@ xhr.onload = function () {                       // When readystate changes
   var href = window.location.href;
   var hrefNum = parseInt(href.substr(href.length - 2));
   var hrefDay = href.charAt(37);
-  console.log(hrefNum);
-  console.log(hrefDay);
 
   for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
     firstContent += '<a href="" style = "background: url(../' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>'
@@ -34,7 +32,6 @@ xhr.onload = function () {                       // When readystate changes
   for (let i = 0; i < wrapper_first.length; i++) {
     wrapper_first[i].addEventListener('click', function (e) {
       e.preventDefault();
-      console.log(wrapper_first);
       h3_first.innerHTML = responseObject.first[i].name;
       text_first.innerHTML = responseObject.first[i].text;
       fb_first.innerHTML = responseObject.first[i].facebook;
@@ -66,7 +63,6 @@ xhr.onload = function () {                       // When readystate changes
   for (let i = 0; i < wrapper_second.length; i++) {
     wrapper_second[i].addEventListener('click', function (e) {
       e.preventDefault();
-      console.log(wrapper_second);
       h3_second.innerHTML = responseObject.second[i].name;
       text_second.innerHTML = responseObject.second[i].text;
       fb_second.innerHTML = responseObject.second[i].facebook;
@@ -78,6 +74,12 @@ xhr.onload = function () {                       // When readystate changes
     window.scrollTo({ top: locationSecond, behavior: 'smooth' });
   }
 
+  if (hrefDay == 's') {
+    h3_second.innerHTML = responseObject.second[hrefNum].name;
+    text_second.innerHTML = responseObject.second[hrefNum].text;
+    fb_second.innerHTML = responseObject.second[hrefNum].facebook;
+    insta_second.innerHTML = responseObject.second[hrefNum].instagram;
+  }
 };
 
 xhr.open('GET', 'data.json', true);        // Prepare the request

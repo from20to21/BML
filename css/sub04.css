@@ -145,6 +145,7 @@ section{
 }
 section iframe{
     padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 section .ticket_nav{

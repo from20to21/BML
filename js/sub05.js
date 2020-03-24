@@ -75,7 +75,6 @@ window.addEventListener('load', function () {
 
             chevron = extend.querySelectorAll('a');
             chevron[0].addEventListener('click', function (e) {
-                console.log(location);
                 delTriangle();
                 e.preventDefault();
                 k--;
@@ -94,7 +93,6 @@ window.addEventListener('load', function () {
                 prevUrl = thumbnail[k].style.backgroundImage;
                 extendimg.src = prevUrl.split('"')[1];
 
-                console.log(k);
                 spanAll[k].style.display = 'block';
                 move();
             });

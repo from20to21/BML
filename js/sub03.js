@@ -33,7 +33,6 @@ var ul = document.querySelectorAll('ul');
 
 window.addEventListener("scroll", function () {
     var scrollY = getCurrentScrollPercentage();
-    console.log(scrollY);
     if (scrollY <= 5) {
         for (var i = 0; i < li.length; i++) {
             li[i].classList.remove('active');

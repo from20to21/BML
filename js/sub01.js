@@ -7,7 +7,6 @@ var text = document.querySelectorAll('article p');
 
 window.addEventListener('scroll', function () {
     var scrollY = getCurrentScrollPercentage();
-    console.log(scrollY);
     if (scrollY <= 5) {
         for (var i = 0; i < title.length; i++) {
             title[i].classList.remove('active');
