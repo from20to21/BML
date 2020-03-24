@@ -16,6 +16,7 @@ window.addEventListener('load', function () {
     if (hash) {
         var href = window.location.href;
         var hrefNum = parseInt(href.substr(href.length - 2));
+        console.log(hrefNum);
         var hrefDay = href.charAt(37);
         var locationFirst = wrapper[0].offsetTop - 300;
         var locationSecond = wrapper[1].offsetTop - 300;
@@ -24,7 +25,6 @@ window.addEventListener('load', function () {
         var imgname_s = wrapper_second[hrefNum].style.backgroundImage;
         emoticon_f = wrapper_first[hrefNum].querySelector('i');
         emoticon_s = wrapper_second[hrefNum].querySelector('i');
-        console.log('a');
         if (hrefDay == 'f') {
             window.scrollTo({ top: locationFirst, behavior: 'smooth' });
             sub_first.scrollTo({ top: sublocationFirst, behavior: 'smooth' });
