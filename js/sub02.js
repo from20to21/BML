@@ -12,6 +12,32 @@ window.addEventListener('load', function () {
     var emoticon_s = wrapper_first[0].querySelector('i');
     var info_f = mainimg[0].querySelector('a');
     var info_s = mainimg[1].querySelector('a');
+    var title = document.querySelectorAll('section>a');
+
+    title[0].addEventListener('click', function (e) {
+        e.preventDefault();
+        info_f.style.display = "none";
+        content_first.classList.remove('active');
+        emoticon_f.classList.remove('active');
+        mainimg[0].style = "background: url(../" + "img/lineup/lineup02.jpg" + " no-repeat center / cover;";
+        var emoticon2 = this.querySelector('i');
+        for (var j = 0; j < wrapper_first.length; j++) {
+            var emoticon3 = sub_first.querySelectorAll('i');
+            emoticon3[j].classList.remove('active');
+        }
+    })
+    title[1].addEventListener('click', function (e) {
+        e.preventDefault();
+        info_s.style.display = "none";
+        content_second.classList.remove('active');
+        emoticon_s.classList.remove('active');
+        mainimg[1].style = "background: url(../" + "img/lineup/lineup02.jpg" + " no-repeat center / cover;";
+        var emoticon2 = this.querySelector('i');
+        for (var j = 0; j < wrapper_second.length; j++) {
+            var emoticon3 = sub_second.querySelectorAll('i');
+            emoticon3[j].classList.remove('active');
+        }
+    })
 
     if (hash) {
         var href = window.location.href;
