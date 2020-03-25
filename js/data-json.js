@@ -47,6 +47,17 @@ xhr.onload = function () {                       // When readystate changes
     insta_first.innerHTML = responseObject.first[hrefNum].instagram;
   }
 
+  var title = document.querySelectorAll('section>a');
+
+  title[0].addEventListener('click', function (e) {
+    e.preventDefault();
+    h3_first.innerHTML = " ";
+    text_first.innerHTML = " ";
+    fb_first.innerHTML = " ";
+    insta_first.innerHTML = " ";
+  });
+
+
   //}
 
   var secondContent = '';
@@ -81,6 +92,14 @@ xhr.onload = function () {                       // When readystate changes
     fb_second.innerHTML = responseObject.second[hrefNum].facebook;
     insta_second.innerHTML = responseObject.second[hrefNum].instagram;
   }
+  title[1].addEventListener('click', function (e) {
+    e.preventDefault();
+    h3_second.innerHTML = " ";
+    text_second.innerHTML = " ";
+    fb_second.innerHTML = " ";
+    insta_second.innerHTML = " ";
+  });
+
 };
 
 xhr.open('GET', 'data.json', true);        // Prepare the request
