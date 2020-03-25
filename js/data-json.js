@@ -23,12 +23,12 @@ xhr.onload = function () {                       // When readystate changes
   // Update the page with the new content
   document.getElementById('first').innerHTML = firstContent;
 
-  var wrapper = document.querySelectorAll('.img-wrapper');
-  var wrapper_first = wrapper[0].querySelectorAll('.img-sub a');
-  var h3_first = wrapper[0].querySelector('.img-main .content #h3_f');
-  var text_first = wrapper[0].querySelector('.img-main .content #text_f');
-  var fb_first = wrapper[0].querySelector('.img-main .content #fb_f');
-  var insta_first = wrapper[0].querySelector('.img-main .content #insta_f');
+  var wrapper = document.querySelectorAll('.img__wrapper');
+  var wrapper_first = wrapper[0].querySelectorAll('.img__sub a');
+  var h3_first = wrapper[0].querySelector('#h3_f');
+  var text_first = wrapper[0].querySelector('#text_f');
+  var fb_first = wrapper[0].querySelector('#fb_f');
+  var insta_first = wrapper[0].querySelector('#insta_f');
 
   for (let i = 0; i < wrapper_first.length; i++) {
     wrapper_first[i].addEventListener('click', function (e) {
@@ -58,11 +58,11 @@ xhr.onload = function () {                       // When readystate changes
   }
   document.getElementById('second').innerHTML = secondContent;
 
-  var wrapper_second = wrapper[1].querySelectorAll('.img-sub a');
-  var h3_second = wrapper[1].querySelector('.img-main .content #h3_s');
-  var text_second = wrapper[1].querySelector('.img-main .content #text_s');
-  var fb_second = wrapper[1].querySelector('.img-main .content #fb_s');
-  var insta_second = wrapper[1].querySelector('.img-main .content #insta_s');
+  var wrapper_second = wrapper[1].querySelectorAll('.img__sub a');
+  var h3_second = wrapper[1].querySelector('#h3_s');
+  var text_second = wrapper[1].querySelector('#text_s');
+  var fb_second = wrapper[1].querySelector('#fb_s');
+  var insta_second = wrapper[1].querySelector('#insta_s');
 
   for (let i = 0; i < wrapper_second.length; i++) {
     wrapper_second[i].addEventListener('click', function (e) {

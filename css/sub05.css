@@ -9,7 +9,7 @@ header{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-.header__wrapper nav a:nth-of-type(6):after{
+.header__wrapper nav a:nth-of-type(5):after{
     width: 100%;
     opacity: 1;
 }

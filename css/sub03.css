@@ -9,7 +9,7 @@ header{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-.header__wrapper nav a:nth-of-type(4):after{
+.header__wrapper nav a:nth-of-type(3):after{
     width: 100%;
     opacity: 1;
 }
@@ -19,13 +19,13 @@ header{
 section{
     position: relative;
 }
-section .ticket_nav{
+.ticket__nav{
     width: 600px;
     margin: 130px auto 70px;
     display: flex;
     justify-content: center;
 }
-section .ticket_nav a{
+.ticket__nav a{
     line-height: 30px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.3rem;
@@ -35,30 +35,24 @@ section .ticket_nav a{
     border-left: 1px solid rgba(0,0,0,.4);
     border-right: 1px solid rgba(0,0,0,.1);
 }
-section .ticket_nav a:first-child{
+.ticket__nav a:first-child{
     border-left: none;
 }
-section .ticket_nav a:last-child{
+.ticket__nav a:last-child{
     border-right: none;
 }
-section .main_content{
+.main__content{
     width: 1100px;
     margin: 0 auto;
-    display: flex;
-    position: relative;
 }
-section .main_content:last-child{
+.main__content:last-child{
     display: none;
 }
-section .main_content .content{
-    width: 100%;
-    padding-top: 10px;
-}
-section .main_content .content .title{
+.main__title{
     width: 100%;
     margin: 30px auto;
 }
-section .main_content .content .title h3{
+.main__title h3{
     text-align: center;
     line-height: 40px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -66,7 +60,7 @@ section .main_content .content .title h3{
     font-weight: 600;
     margin-bottom: 20px;
 }
-section .main_content .content .title p{
+.main__title p{
     text-align: center;
     padding:10px 0;
     line-height: 1rem;
@@ -74,7 +68,7 @@ section .main_content .content .title p{
     font-size: 0.9rem;
     font-weight: 300;
 }
-section .main_content .content .ticket_link{
+.main__ticket{
     width: 50%;
     padding: 15px 0;
     margin: 50px auto 80px;
@@ -83,7 +77,7 @@ section .main_content .content .ticket_link{
     border-radius: 5px;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
 }
-section .main_content .content .ticket_link a{
+.main__ticket a{
     text-align: center;
     line-height: 1rem;
     font-family: 'Noto Sans KR', sans-serif;
@@ -95,20 +89,16 @@ section .main_content .content .ticket_link a{
     border-left: 1px solid rgba(0,0,0,.3);
     border-right: 1px solid rgba(255,255,255,.3);
 }
-section .main_content .content .ticket_link .fullsize_a{
+.main__ticket .fullsize{
     width: 100%;
 }
-section .main_content .content .ticket_link a:first-child{ 
+.main__ticket a:first-child{ 
     border-left: none;
 }
-section .main_content .content .ticket_link a:last-child{ 
+.main__ticket a:last-child{ 
     border-right: none;
 }
-
-section .main_content .content ul{
-    margin: 0 auto;
-}
-section .main_content .content ul li{
+.main__content ul li{
     padding:18px 0 0;
     width: 90%;
     margin: 0 auto;
@@ -117,17 +107,17 @@ section .main_content .content ul li{
     margin-top: 150px;
     opacity: 0;
 }
-section .main_content .content ul li:nth-of-type(2n){
+.main__content ul li:nth-of-type(2n){
     padding:5px 0 20px;
 }
-section .main_content .content ul li strong{
+.main__content ul li strong{
     text-align: center;
     line-height: 1rem;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.3rem;
     font-weight: 500;
 }
-section .main_content .content ul li em{
+.main__content ul li em{
     text-align: center;
     line-height: 2rem;
     font-family: 'Noto Sans KR', sans-serif;
@@ -135,7 +125,7 @@ section .main_content .content ul li em{
     font-weight: 500;
     transition: lineheight .5s;
 }
-section .main_content .content ul li p{
+.main__content ul li p{
     text-align: center;
     line-height: 2rem;
     font-family: 'Noto Sans KR', sans-serif;
@@ -144,10 +134,10 @@ section .main_content .content ul li p{
     transition: lineheight .5s;
     word-break: keep-all;
 }
-section .main_content .content ul li:last-child{
+.main__content ul li:last-child{
     width: 70%;
 }
-section .main_content .content ul li.active{
+.main__content ul li.active{
     animation: scrollani 2s forwards;
 }
 @keyframes scrollani{

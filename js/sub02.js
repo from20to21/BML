@@ -1,15 +1,16 @@
 window.addEventListener('load', function () {
-    var wrapper = document.querySelectorAll('.img-wrapper');
-    var sub_first = wrapper[0].querySelector('.img-sub');
-    var wrapper_first = wrapper[0].querySelectorAll('.img-sub a');
-    var content_first = wrapper[0].querySelector('.img-main .content');
-    var sub_second = wrapper[1].querySelector('.img-sub');
-    var wrapper_second = wrapper[1].querySelectorAll('.img-sub a');
-    var content_second = wrapper[1].querySelector('.img-main .content');
-    var mainimg = document.querySelectorAll('.img-wrapper .img-main');
+    var wrapper = document.querySelectorAll('.img__wrapper');
+    var sub_first = wrapper[0].querySelector('.img__sub');
+    var wrapper_first = wrapper[0].querySelectorAll('.img__sub a');
+    var content_first = wrapper[0].querySelector('.img__main .img__content');
+    var sub_second = wrapper[1].querySelector('.img__sub');
+    var wrapper_second = wrapper[1].querySelectorAll('.img__sub a');
+    var content_second = wrapper[1].querySelector('.img__main .img__content');
+
     var hash = location.hash;
     var emoticon_f = wrapper_first[0].querySelector('i');
     var emoticon_s = wrapper_second[0].querySelector('i');
+    var mainimg = document.querySelectorAll('.img__wrapper .img__main');
     var info_f = mainimg[0].querySelector('a');
     var info_s = mainimg[1].querySelector('a');
     var title = document.querySelectorAll('section>a');
@@ -120,4 +121,43 @@ window.addEventListener('load', function () {
             content_second.classList.remove('active');
         }
     });
+
+    // function summary(n, s) {
+    //     this.name = n,
+    //         this.selec = s,
+    //         this.main = function () {
+    //             return this.name + this.selec;
+    //         },
+    //         this.main = function () {
+    //             return this.name + this.selec;
+    //         }
+    // }
+    // var a = new summary('aaa', 'selector');
+    // console.log(a.name)
+
+
+
+    // 객체로 짜는법
+    // var b = [info_f, content_first, emoticon_f, mainimg[0], sub_first];
+    // var c = ['s3', 's4'];
+
+    // function summary2(n) {
+    //     this[0].style.display = "none";
+    //     this[1].classList.remove('active');
+    //     this[2].classList.remove('active');
+    //     this[3].style = "background: url(../" + "img/lineup/lineup02.jpg" + " no-repeat center / cover;";
+    //     for (var j = 0; j < wrapper_first.length; j++) {
+    //         var emoticon3 = this[4].querySelectorAll('i');
+    //         emoticon3[j].classList.remove('active');
+    //     }
+
+    // }
+
+    // console.log(summary2.call(b, 'img/lineup/lineup02.jpg'));
+    // console.log(summary2.call(c, 'img/lineup/lineup03.jpg'));
+
+
 });
+
+
+

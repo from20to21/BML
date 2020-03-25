@@ -1,6 +1,6 @@
 
-var ticket_nav = document.querySelectorAll('.ticket_nav a');
-var main_content = document.querySelectorAll('.main_content');
+var ticket_nav = document.querySelectorAll('.ticket__nav a');
+var main_content = document.querySelectorAll('.main__content');
 var active = 0;
 var hidden = 0;
 for (var i = 0; i < ticket_nav.length; i++) {
@@ -14,7 +14,7 @@ for (var i = 0; i < ticket_nav.length; i++) {
             active = 1;
             hidden = 0;
         }
-        main_content[active].style.display = 'flex';
+        main_content[active].style.display = 'block';
         main_content[hidden].style.display = 'none';
         // for (var j = 0; j < ticket_nav.length; j++) {
         //     ticket_nav[j].classList.remove('active');
