@@ -37,6 +37,7 @@ section>a{
     margin: 20px 0;
     position: relative;
     color: #fff;
+    margin-left: 5px;
 }
 section>a:nth-of-type(2){
     margin-left: 84%;
@@ -69,7 +70,6 @@ section .img-wrapper:last-child{
 section .img-wrapper .img-main{
     width: 70%;
     border-radius: 20px;
-    /* background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119)); */
     background: url('../img/lineup/lineup01.jpg') no-repeat center/ cover;
     box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
     position: relative;
