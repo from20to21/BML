@@ -85,12 +85,14 @@ window.addEventListener('load', function () {
     }
     info_f.addEventListener('click', function (e) {
         e.preventDefault();
-        content_first.classList.toggle('active');
+        // content_first.classList.toggle('active');
     })
     mainimg[0].addEventListener('click', function (e) {
         e.preventDefault();
         content_first.classList.toggle('active');
     })
+
+
     for (var i = 0; i < wrapper_second.length; i++) {
         wrapper_second[i].addEventListener('click', function (e) {
             e.preventDefault();
@@ -109,7 +111,7 @@ window.addEventListener('load', function () {
     }
     info_s.addEventListener('click', function (e) {
         e.preventDefault();
-        content_second.classList.toggle('active');
+        // content_second.classList.toggle('active');
     })
     mainimg[1].addEventListener('click', function (e) {
         e.preventDefault();
