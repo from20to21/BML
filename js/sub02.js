@@ -9,7 +9,7 @@ window.addEventListener('load', function () {
     var mainimg = document.querySelectorAll('.img-wrapper .img-main');
     var hash = location.hash;
     var emoticon_f = wrapper_first[0].querySelector('i');
-    var emoticon_s = wrapper_first[0].querySelector('i');
+    var emoticon_s = wrapper_second[0].querySelector('i');
     var info_f = mainimg[0].querySelector('a');
     var info_s = mainimg[1].querySelector('a');
     var title = document.querySelectorAll('section>a');
@@ -24,7 +24,8 @@ window.addEventListener('load', function () {
             var emoticon3 = sub_first.querySelectorAll('i');
             emoticon3[j].classList.remove('active');
         }
-    })
+    });
+
     title[1].addEventListener('click', function (e) {
         e.preventDefault();
         info_s.style.display = "none";
@@ -35,7 +36,7 @@ window.addEventListener('load', function () {
             var emoticon3 = sub_second.querySelectorAll('i');
             emoticon3[j].classList.remove('active');
         }
-    })
+    });
 
     if (hash) {
         var href = window.location.href;
@@ -79,18 +80,18 @@ window.addEventListener('load', function () {
             emoticon2.classList.add('active');
             var imgname = this.style.backgroundImage;
             mainimg[0].style = "background:" + imgname + " no-repeat center / cover;";
-        })
+        });
     }
     info_f.addEventListener('click', function (e) {
         e.preventDefault();
-    })
+    });
     mainimg[0].addEventListener('click', function (e) {
         e.preventDefault();
         content_first.classList.toggle('active');
         if (info_f.style.display == 'none') {
             content_first.classList.remove('active');
         }
-    })
+    });
 
 
     for (var i = 0; i < wrapper_second.length; i++) {
@@ -107,16 +108,16 @@ window.addEventListener('load', function () {
             emoticon2.classList.add('active');
             var imgname = this.style.backgroundImage;
             mainimg[1].style = "background:" + imgname + " no-repeat center / cover;";
-        })
+        });
     }
     info_s.addEventListener('click', function (e) {
         e.preventDefault();
-    })
+    });
     mainimg[1].addEventListener('click', function (e) {
         e.preventDefault();
         content_second.classList.toggle('active');
         if (info_s.style.display == 'none') {
             content_second.classList.remove('active');
         }
-    })
+    });
 });
