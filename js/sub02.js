@@ -20,7 +20,6 @@ window.addEventListener('load', function () {
         content_first.classList.remove('active');
         emoticon_f.classList.remove('active');
         mainimg[0].style = "background: url(../" + "img/lineup/lineup02.jpg" + " no-repeat center / cover;";
-        var emoticon2 = this.querySelector('i');
         for (var j = 0; j < wrapper_first.length; j++) {
             var emoticon3 = sub_first.querySelectorAll('i');
             emoticon3[j].classList.remove('active');
@@ -32,7 +31,6 @@ window.addEventListener('load', function () {
         content_second.classList.remove('active');
         emoticon_s.classList.remove('active');
         mainimg[1].style = "background: url(../" + "img/lineup/lineup02.jpg" + " no-repeat center / cover;";
-        var emoticon2 = this.querySelector('i');
         for (var j = 0; j < wrapper_second.length; j++) {
             var emoticon3 = sub_second.querySelectorAll('i');
             emoticon3[j].classList.remove('active');
