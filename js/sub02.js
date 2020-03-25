@@ -85,11 +85,13 @@ window.addEventListener('load', function () {
     }
     info_f.addEventListener('click', function (e) {
         e.preventDefault();
-        // content_first.classList.toggle('active');
     })
     mainimg[0].addEventListener('click', function (e) {
         e.preventDefault();
         content_first.classList.toggle('active');
+        if (info_f.style.display == 'none') {
+            content_first.classList.remove('active');
+        }
     })
 
 
@@ -111,10 +113,12 @@ window.addEventListener('load', function () {
     }
     info_s.addEventListener('click', function (e) {
         e.preventDefault();
-        // content_second.classList.toggle('active');
     })
     mainimg[1].addEventListener('click', function (e) {
         e.preventDefault();
         content_second.classList.toggle('active');
+        if (info_s.style.display == 'none') {
+            content_second.classList.remove('active');
+        }
     })
 });
