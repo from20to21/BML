@@ -215,6 +215,7 @@ header.bg02{
     padding-left: 25px;
     display: flex;
     justify-content: flex-start;
+    position: relative;
 }
 .board__title strong{
     font-weight: bold;
@@ -232,7 +233,9 @@ header.bg02{
     width: 16px;
     height: 16px;
     padding-top: 10px;
-    margin-left: 210px;
+    /* margin-left: 210px; */
+    position: absolute;
+    right: 10%;
 }
 .board__title span{
     display: block;
