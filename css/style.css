@@ -369,6 +369,7 @@ header.bg02{
     transform: translate(-50%,-50%);
 }
 .lineup__slider{
+    width:max-content;
     position: absolute;
     top: 15%; left: 0%;
     display: flex;

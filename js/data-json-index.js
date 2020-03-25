@@ -10,27 +10,84 @@ xhr.onload = function () {                       // When readystate changes
 
     // BUILD UP STRING WITH NEW CONTENT (could also use DOM manipulation)
     var firstContent = '';
-    var slide = document.querySelector(".lineup__slider");
+    var arr = [];
+    var i = 0;
 
-    for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
-        if (i < 10) {
-            firstContent += '<li><a href="sub/sub02.html#f0' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+    while (++i <= 12) {
+        var num = Math.ceil(Math.random() * responseObject.first.length - 1);
+        check(num);
+    }//랜덤수 생성
+    function check(n) {
+        var bln = true;
+        for (var k in arr) {
+            if (arr[k] === n) {
+                bln = false;
+                i--;
+                break;
+            }
+        }
+        if (bln) {
+            arr.push(n);
+        }
+    }//배열에 같은값이 없으면 저장하기
+
+    // for (i = 0; i < responseObject.first.length; i++) { 
+    //     if (i < 10) {
+    //         firstContent += '<li><a href="sub/sub02.html#f0' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+    //     }
+    //     else {
+    //         firstContent += '<li><a href="sub/sub02.html#f' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+    //     }
+    // }
+    // for (i = 0; i < responseObject.second.length; i++) { 
+    //     if (i < 10) {
+    //         firstContent += '<li><a href="sub/sub02.html#s0' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+    //     }
+    //     else {
+    //         firstContent += '<li><a href="sub/sub02.html#s' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+    //     }
+    // }
+    for (i = 0; i < 6; i++) {
+        var k = parseInt(arr[i]);
+        if (k < 10) {
+            firstContent += '<li><a href="sub/sub02.html#f0' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
         }
         else {
-            firstContent += '<li><a href="sub/sub02.html#f' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#f' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
         }
     }
-    for (var i = 0; i < responseObject.second.length; i++) { // Loop through object
-        if (i < 10) {
-            firstContent += '<li><a href="sub/sub02.html#s0' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+    for (i = 6; i < 12; i++) {
+        var k = parseInt(arr[i]);
+        if (k < 10) {
+            firstContent += '<li><a href="sub/sub02.html#s0' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
         }
         else {
-            firstContent += '<li><a href="sub/sub02.html#s' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#s' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
+        }
+    }
+    for (i = 0; i < 6; i++) {
+        var k = parseInt(arr[i]);
+        if (k < 10) {
+            firstContent += '<li><a href="sub/sub02.html#f0' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
+        }
+        else {
+            firstContent += '<li><a href="sub/sub02.html#f' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
+        }
+    }
+    for (i = 6; i < 12; i++) {
+        var k = parseInt(arr[i]);
+        if (k < 10) {
+            firstContent += '<li><a href="sub/sub02.html#s0' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
+        }
+        else {
+            firstContent += '<li><a href="sub/sub02.html#s' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
         }
     }
     // Update the page with the new content
+    var slide = document.querySelector(".lineup__slider");
+
     slide.innerHTML = firstContent;
-    slide.style.left = 0 + "%";
+
     var a = 0;
     var bln = false;
     slide.addEventListener("mouseenter", function (e) {
@@ -42,11 +99,11 @@ xhr.onload = function () {                       // When readystate changes
         slidework();
     });
     function slideimg() {
-        if (a < -171.4) {
+        if (a < -50) {
             a = 0;
         } else {
             a -= 0.02856667;
-            slide.style.left = a + "%";
+            slide.style.transform = "translateX(" + a + "%)";
         }
         if (bln == true) {
             clearInterval(move);
@@ -54,7 +111,7 @@ xhr.onload = function () {                       // When readystate changes
     }
     var move;
     function slidework() {
-        move = setInterval(slideimg, 30);
+        move = setInterval(slideimg, 20);
     }
     slidework();
 };
