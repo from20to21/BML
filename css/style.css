@@ -579,9 +579,9 @@ video{
     z-index: 3;
     transform: translate(0, 0);
 }
-.map_location img{
+.map_location>img{
     float: right;
-    height: 62px;
+    height: 102px;
     padding-top: 38px;
     padding-right: 30px;
     animation: none;
