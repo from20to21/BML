@@ -122,14 +122,12 @@ section>p{
     padding-top: 80px;
     padding-left: 80px;
     display: flex;
-    justify-content: space-between;
-
 }
 .map__tagbox button{
     outline: none;
     cursor: pointer;
     width: 30%;
-    height: 60px;
+    height: 25px;
     border:none;
     background:none;
     color: #fff;
