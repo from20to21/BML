@@ -1,3 +1,4 @@
+//버튼메뉴 변경용
 var btn = document.querySelectorAll('.map__tagbox button');
 var select = document.querySelectorAll('.select');
 
@@ -17,3 +18,20 @@ for (let i = 0; i < btn.length; i++) {
         select[i].classList.add('active');
     });
 }
+//버튼메뉴 변경용end
+
+
+var festivalMap = document.querySelector('.festivalMap');
+var festivalMapBtn = document.querySelector('.map__stage button');
+var festivalMapImage = festivalMap.querySelector('img');
+var closeBtn = festivalMap.querySelector('.closebtn');
+
+festivalMapBtn.addEventListener('click', function () {
+    festivalMap.style.display = 'block';
+})
+festivalMap.addEventListener('click', function () {
+    festivalMap.style.display = 'none';
+})
+closeBtn.addEventListener('click', function () {
+    festivalMap.style.display = 'none';
+})
