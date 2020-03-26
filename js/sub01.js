@@ -35,3 +35,11 @@ window.addEventListener('scroll', function () {
     }
 });
 //h3와 p 모두 offsetheight값을구해서 그 값을 지나갈때 이벤트 발생하도록 클래스를 추가하면?
+
+//스크롤이벤트
+var scroll = document.querySelector('.header__scroll');
+
+scroll.addEventListener('click', function () {
+    window.scrollTo({ top: 550, behavior: 'smooth' });
+})
+//스크롤이벤트end

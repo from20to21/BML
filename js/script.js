@@ -48,3 +48,11 @@ pause.addEventListener("click", function (e) {
     playPause();
 }); //일시정지
 //비디오 end
+
+//스크롤이벤트
+var scroll = document.querySelector('.header__scroll');
+
+scroll.addEventListener('click', function () {
+    window.scrollTo({ top: 550, behavior: 'smooth' });
+})
+//스크롤이벤트end

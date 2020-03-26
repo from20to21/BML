@@ -60,36 +60,39 @@ a{
 
 /* header */
 .header__wrapper{
+  width: 100%;
   height: 600px;
   background: rgba(0,0,0,.5);
 }
-.header__wrapper h1{
+.header__nav{
+  padding-top: 80px;
   width: 60%;
   margin: 0 auto;
-  padding-top: 80px;
+}
+.header__nav h1{
+  width: 80%;
+  margin: 0 auto 30px;
 } 
-.header__wrapper h1 a{
+.header__nav h1 a img{
   width: 198px;
   height : 38px;
-  background: url('../img/logo_w.png') no-repeat center;
-  position: absolute;
 }
-.header__wrapper nav{
-  width: 80%;
+.header__nav nav{
   display: flex; 
-  justify-content: flex-end;
+  justify-content: space-around;
+  float: right;
 }
-.header__wrapper nav a{
-  margin-right:30px;
+.header__nav nav a{
+  margin-left: 5%;
   color: transparent;
   font-weight: bold;
   font-size: 1.5rem;
   position: relative;
 }
-.header__wrapper nav a:last-child{
-  margin-right: 0;
+.header__nav nav a:last-child{
+  padding-right: 0;
 }
-.header__wrapper nav a:after{
+.header__nav nav a:after{
   content: '';
   display: block;
   width: 0%;
@@ -104,11 +107,11 @@ a{
   transition: .5s;
 }
 
-.header__wrapper nav a:hover:after{
+.header__nav nav a:hover:after{
   width: 100%;
   opacity: 1;
 }
-.header__wrapper nav a:before{
+.header__nav nav a:before{
   content:attr(data-text);
   width:100%; height:100%;
   position: absolute;
@@ -212,3 +215,15 @@ footer{
   width: 37px;
 }
 /* footer-end */
+
+/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) { /*스타일입력*/}
+
+/* 테블릿 세로 (해상도 768px ~ 1023px)*/
+@media all and (min-width:768px) and (max-width:1023px) { /*스타일입력*/}
+
+/* 모바일 가로, 테블릿 세로 (해상도 480px ~ 767px)*/
+@media all and (min-width:480px) and (max-width:767px) { /*스타일입력*/}
+
+/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
+@media all and (max-width:479px) { /*스타일입력*/}

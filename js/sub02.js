@@ -122,6 +122,14 @@ window.addEventListener('load', function () {
         }
     });
 
+    //스크롤이벤트
+    var scroll = document.querySelector('.header__scroll');
+
+    scroll.addEventListener('click', function () {
+        window.scrollTo({ top: 550, behavior: 'smooth' });
+    })
+    //스크롤이벤트end
+
     // function summary(n, s) {
     //     this.name = n,
     //         this.selec = s,

@@ -153,6 +153,7 @@ section>p{
     display: inline-block;
 }
 .map__stage button{
+    margin-top: 10px;
     cursor: pointer;
     margin-left: 10px;
     background: none;
@@ -162,8 +163,12 @@ section>p{
     font-size: 1rem;
     color: #fff;
     outline: none;
+    padding-right: 8px;
 }
-
+.map__stage button i{
+    color: #fff;
+    margin-left: 8px;
+}
 .map__parking{
     height: 600px;
     overflow: hidden;
