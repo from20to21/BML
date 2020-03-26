@@ -53,7 +53,7 @@ section>p{
     width: 40%;
 }
 .map__way{
-    height: 400px;
+    height: 500px;
     overflow: hidden;
     padding-top: 40px;
     padding-left: 30px;
@@ -74,7 +74,108 @@ section>p{
     display: inline-block;
 }
 .map__way p{
+    display: block;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4rem;
+    color:#fff;
+    letter-spacing: 0.1rem;
+    padding-bottom: 20px;
+}
+.map__way p:nth-of-type(1){
     display: inline-block;
+}
+.map__way h4{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 2.3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height:1.3em;
+    color:#fff;
+    letter-spacing: 0.1rem;
+}
+
+
+.map__stage{
+    height: 500px;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.map__stage img{
+    display: block;
+    height:20%;
+    padding-bottom: 20px;
+}
+.map__stage strong{
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.667rem;
+    color:#fff;
+    letter-spacing: 0.1rem;
+    padding-bottom:50px;
+}
+.map__stage span{
+    display: block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.4rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height:1.3em;
+    color:#fff;
+    letter-spacing: 0.1rem;
+    word-break: keep-all;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.map__stage p{
+    display: block;
+    color: #fff;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.4rem;
+    color:#fff;
+    letter-spacing: 0.1rem;
+    word-break: keep-all;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.map__stage p:nth-of-type(1){
+    display: inline-block;
+}
+
+.map__parking{
+    height: 500px;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+.map__parking img{
+    display: block;
+    height:20%;
+    padding-bottom: 20px;
+}
+.map__parking strong{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.667rem;
+    color:#fff;
+    letter-spacing: 0.1rem;
+    padding-bottom:40px;
+    display: inline-block;
+}
+.map__parking p{
+    display:block;
     color: #fff;
     font-weight: lighter;
     font-size: 1.3rem;
@@ -83,18 +184,10 @@ section>p{
     color:#fff;
     letter-spacing: 0.1rem;
 }
-.map__way h4{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    font-weight: lighter;
-    font-size: 2.2rem;
-    font-family: 'Noto Sans KR', sans-serif;
-    line-height:1.3em;
-    color:#fff;
-    letter-spacing: 0.1rem;
+.map__parking p:nth-of-type(1){
+    display: inline-block;
 }
-.map__way em{
+.map__parking em{
     display: block;
     color: #fff;
     font-weight: lighter;
@@ -106,6 +199,14 @@ section>p{
     padding-bottom: 10px;
     word-break: keep-all;
 }
+
+.select{
+    display: none;
+}
+.select.active{
+    display: block;
+}
+
 .map__image{
     width:60%;
     height: 600px;
@@ -118,8 +219,7 @@ section>p{
     width: 90%;
 }
 .map__tagbox{
-    width: 90%;
-    padding-top: 80px;
+    width: 100%;
     padding-left: 80px;
     display: flex;
 }

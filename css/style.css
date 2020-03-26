@@ -347,11 +347,11 @@ header.bg02{
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 5px;
     text-align: center;
-    padding-top: 7px;
+    padding-top: 5px;
     padding-left:2px;
-    padding-right:10px;
-    width : 80px;
-    height: 25px;
+    padding-right:13px;
+    width : 90px;
+    height: 30px;
     border: 1px solid #ddd;
     border-radius: 10px;
     position: absolute;
@@ -362,7 +362,7 @@ header.bg02{
     border: 1px solid #aaa;
 }
 .lineup__textWrapper>a img{
-    width: 8px;
+    width: 6px;
     position: absolute;
     top: 50%;
     right: 3%;
