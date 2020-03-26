@@ -157,7 +157,6 @@ section>p{
     padding-top: 60px;
     padding-left: 30px;
 }
-
 .map__parking strong{
     color: #fff;
     font-weight: bold;
@@ -203,9 +202,14 @@ section>p{
 
 .select{
     display: none;
+    margin-top: 100px;
+    opacity: 0;
 }
 .select.active{
     display: block;
+    opacity: 1;
+    margin-top: 0px;
+    transition: .5s;
 }
 
 .map__image{
