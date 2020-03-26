@@ -125,20 +125,26 @@ section>p{
 
 }
 .map__tagbox button{
+    outline: none;
+    cursor: pointer;
     width: 30%;
     height: 60px;
     border:none;
-    background: #fff;
-    color: #333;
-    border-radius: 10px;    
+    background:none;
+    color: #fff;
     font-weight: 300;
     letter-spacing: 0.05rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
-    box-shadow: rgba(0,0,0,.2) 3px 2px 10px;
+    transition: .3s;
+}
+.map__tagbox button:hover{
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 .map__tagbox button.active{
-    border: 5px solid #f15166;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 /* 
     width: 50%;
