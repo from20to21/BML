@@ -111,7 +111,7 @@ xhr.onload = function () {                       // When readystate changes
     }
     var move;
     function slidework() {
-        move = setInterval(slideimg, 20);
+        move = setInterval(slideimg, 30);
     }
     slidework();
 };
