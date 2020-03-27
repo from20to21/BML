@@ -64,6 +64,9 @@ a{
   height: 600px;
   background: rgba(0,0,0,.5);
 }
+.header__wrapper__mobile{
+  display: none;
+}
 .header__nav{
   width: 80%;
   margin: 0 auto;
@@ -125,7 +128,7 @@ a{
   z-index:2;
   font-size: 1.1rem;
   color:#fff;
-  animation: none;s
+  animation: none;
 }
 
 
@@ -236,93 +239,51 @@ footer{
   width: 100%;
   height: 600px;
   background: rgba(0,0,0,.5);
+  display: none;
 }
-.header__nav{
-  width: 80%;
-  margin: 0 auto;
-  padding-top: 80px;
-  position: relative;
-}
-.header__nav h1{
-  width: 20%;
-  margin: 0 auto 30px;
-  position: absolute;
-  top:40%; left: 0;
-} 
-.header__nav h1 a img{
-  width: 198px;
-  height : 38px;
-}
-.header__nav nav{
-  width:80%;
-  display: flex; 
-  justify-content: flex-end;
-  float: right;
-}
-.header__nav nav a{
-  margin-left: 5%;
-  color: transparent;
-  font-weight: bold;
-  font-size: 1.2rem;
-  position: relative;
-}
-.header__nav nav a:last-child{
-  padding-right: 0;
-}
-.header__nav nav a:after{
-  content: '';
-  display: block;
-  width: 0%;
-  height: 120%;
-  background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
-  border-radius: 10px;
-  position: absolute;
-  top: 50%; left:50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0;
-  padding: 2px 5px;
-  transition: .5s;
-}
-
-.header__nav nav a:hover:after{
+.header__wrapper__mobile{
   width: 100%;
-  opacity: 1;
-}
-.header__nav nav a:before{
-  content:attr(data-text);
-  width:120%; height:100%;
-  position: absolute;
-  top: 50%; left:50%;
-  transform: translate(-37%, -37%);
-  z-index:2;
-  font-size: 1.1rem;
-  color:#fff;
-  animation: none;s
-}
-
-
-.header__title{
-  width: 933px; 
   margin:0 auto;
   color: #fff;
-  padding: 160px 0;
   text-align: center;
+  height: 500px;
+  background: rgba(0,0,0,.5);
+  display: block;
 }
-.header__title h2{
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 3.5rem;
+.header__nav__mobile{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: #fff;
+  position: fixed;
+  top: 2%; left: 2%;
+  box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
+  z-index: 99;
+  transition: height .5s;
+}
+.header__nav__mobile.active{ 
+  width: 900px;
+  height: 900px;
+  position: fixed;
+  top: -20%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+.header__title__mobile h2{
+  padding-top: 200px;
+  font-weight: 400;
+  font-size: 1.8em;
+  line-height: 1.4em;
   color:#fff;
 }
-.header__title p{
+.header__title__mobile p{
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
-  font-size: 2.222rem;
+  font-size: 1.2em;
   padding-bottom: 70px;
   padding-top: 10px;
   color:#fff;
 }
+
 .header__scroll{
   background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
   border-radius: 100%;

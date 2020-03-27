@@ -43,3 +43,31 @@ scroll.addEventListener('click', function () {
     window.scrollTo({ top: 550, behavior: 'smooth' });
 })
 //스크롤이벤트end
+
+//메인에서 링크
+var hash = location.hash;
+
+if (hash) {
+    var href = window.location.href;
+    var hrefDay = hash.charAt(1);
+    if (hrefDay == 's') {
+        window.scrollTo({ top: 550, behavior: 'smooth' });
+        for (var j = 0; j < btn.length; j++) {
+            btn[j].className = '';
+            select[j].classList.remove('active');
+        }
+        btn[1].className = 'active';
+        select[1].classList.add('active');
+        festivalMap.style.display = 'block';
+    }
+    if (hrefDay == 'w') {
+        window.scrollTo({ top: 550, behavior: 'smooth' });
+        for (var j = 0; j < btn.length; j++) {
+            btn[j].className = '';
+            select[j].classList.remove('active');
+        }
+        btn[0].className = 'active';
+        select[0].classList.add('active');
+    }
+}
+//메인에서 링크 end

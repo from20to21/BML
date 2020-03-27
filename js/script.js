@@ -56,3 +56,12 @@ scroll.addEventListener('click', function () {
     window.scrollTo({ top: 550, behavior: 'smooth' });
 })
 //스크롤이벤트end
+
+
+//모바일네비
+var mobileNav = document.querySelector('.header__nav__mobile');
+
+mobileNav.addEventListener('click', function () {
+
+    mobileNav.classList.add('active');
+})
