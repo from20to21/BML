@@ -7,6 +7,15 @@ gap = Math.floor(gap / (1000 * 60 * 60 * 24));
 dday.innerHTML += gap;
 // D-day 출력 end
 
+// D-day 출력 for mobile
+var dday = document.querySelector(".header__wrapper__mobile strong");
+var now = new Date();
+var day = new Date("may 16,2020");
+var gap = now.getTime() - day.getTime();
+gap = Math.floor(gap / (1000 * 60 * 60 * 24));
+dday.innerHTML += gap;
+// D-day 출력 end
+
 //배경변경
 var header = document.querySelector("header");
 var num = 1;
@@ -59,9 +68,20 @@ scroll.addEventListener('click', function () {
 
 
 //모바일네비
-var mobileNav = document.querySelector('.header__nav__mobile');
+var menuBtn = document.querySelector('.header__menu__mobile button');
 
-mobileNav.addEventListener('click', function () {
+menuBtn.addEventListener('click', function () {
 
-    mobileNav.classList.add('active');
 })
+
+
+// mobileNav.addEventListener('click', function () {
+//     mobileNav.classList.add('active');
+//     openNav.classList.add('active');
+// })
+
+// closebtn.addEventListener('click', function () {
+//     console.log('a');
+//     mobileNav.classList.remove('active');
+//     openNav.classList.remove('active');
+// })
