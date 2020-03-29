@@ -609,4 +609,32 @@ video{
 @media all and (min-width:480px) and (max-width:767px) { /*스타일입력*/}
 
 /* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/
-@media all and (max-width:479px) { /*스타일입력*/}
+@media all and (max-width:479px) { 
+    header{
+        background: url("../img/backimg_01.jpg") no-repeat center center / cover;
+        position: relative;
+        box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
+        background-attachment: fixed;
+        transition: background-image 1s;
+    }
+    /* header는 relative로 -1로 위치시키고 ,이미지 변하는 div를 fixed로 고정시키는 방법으로 수정해야 */
+    header.bg00{
+        background: url("../img/backimg_01.jpg") no-repeat center center / cover;
+        position: relative;
+        box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
+        background-attachment: fixed;
+    }
+    header.bg01{
+        background: url("../img/backimg_02.jpg") no-repeat center center / cover;
+        position: relative;
+        box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
+        background-attachment: fixed;
+    }
+    header.bg02{
+        background: url("../img/backimg_03.jpg") no-repeat center center / cover;
+        position: relative;
+        box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
+        background-attachment: fixed;
+    }
+    
+}
