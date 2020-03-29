@@ -267,7 +267,6 @@ footer{
   height: 45px;
   border: none;
   background: none;
-  /* background: url('../img/menu.png') no-repeat center; */
 }
 .header__menu__mobile button span{
   display: block;

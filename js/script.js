@@ -84,13 +84,14 @@ menuBack.addEventListener('click',function(){
     menuOpen.style.left ='-100%';
 })
 
-// mobileNav.addEventListener('click', function () {
-//     mobileNav.classList.add('active');
-//     openNav.classList.add('active');
-// })
-
-// closebtn.addEventListener('click', function () {
-//     console.log('a');
-//     mobileNav.classList.remove('active');
-//     openNav.classList.remove('active');
-// })
+var lastScroll = 0;
+window.addEventListener('scroll', function () {
+    var scroll = window.scrollY;
+    if (scroll > lastScroll) {
+        headerTop.style.display='none';
+    }
+    else {
+        headerTop.style.display='block';
+    }
+    lastScroll = scroll;
+});
