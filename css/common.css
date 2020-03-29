@@ -241,6 +241,7 @@ footer{
   background: rgba(0,0,0,.5);
   display: none;
 }
+
 .header__wrapper__mobile{
   width: 100%;
   margin:0 auto;
@@ -259,6 +260,7 @@ footer{
   box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
   z-index: 20;
 }
+
 .header__menu__mobile button{
   position: absolute;
   left: 10px; top:50%;
@@ -268,6 +270,7 @@ footer{
   border: none;
   background: none;
 }
+
 .header__menu__mobile button span{
   display: block;
   width: 100%;
