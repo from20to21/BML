@@ -4,27 +4,27 @@
 /* */
 
 header{
-    background: url("../img/backimg_01.jpg") no-repeat center 120% / cover;
+    background: url("../img/backimg_01.jpg") no-repeat center 120% / 100%;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
     transition: background-image 1s;
-}
+} 
 /* header는 relative로 -1로 위치시키고 ,이미지 변하는 div를 fixed로 고정시키는 방법으로 수정해야 */
 header.bg00{
-    background: url("../img/backimg_01.jpg") no-repeat center 120% / cover;
+    background: url("../img/backimg_01.jpg") no-repeat center 120% / 100%;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
 header.bg01{
-    background: url("../img/backimg_02.jpg") no-repeat center 120% / cover;
+    background: url("../img/backimg_02.jpg") no-repeat center 120% / 100%;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
 header.bg02{
-    background: url("../img/backimg_03.jpg") no-repeat center 120% / cover;
+    background: url("../img/backimg_03.jpg") no-repeat center 120% / 100%;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
