@@ -87,12 +87,13 @@ menuBack.addEventListener('click', function () {
 var lastScroll = 0;
 window.addEventListener('scroll', function () {
     var scroll = window.scrollY;
-    if (scroll < 0) { headerTop.style.display = 'block' }
+
     if (scroll > lastScroll) {
         headerTop.style.display = 'none';
     }
     else {
         headerTop.style.display = 'block';
     }
+    if (scroll <= 0) { headerTop.style.display = 'block' }
     lastScroll = scroll;
 });
