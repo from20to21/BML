@@ -330,6 +330,7 @@ footer{
   height: 100%;
   background: rgba(0,0,0,.5);
   display: none;
+  z-index: 900;
 }
 
 .header__title__mobile h2{
