@@ -671,7 +671,8 @@ header.bg02{
     margin: 80px 0;
     display: flex;
     flex-wrap: nowrap; 
-    overflow: scrollX;    
+    /* overflow: scroll;     */
+    overflow-x: scroll;
 }
 .banner__wrapper a{
     width: 70%;
