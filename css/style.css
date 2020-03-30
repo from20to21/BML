@@ -1087,8 +1087,9 @@ video{
 }
 .map__seeMap{
     display: inline-block;
-    width: 46%;
     height: 203px;
+    width: 46%;
+    padding-bottom: 46%;
     border-radius: 20px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
     position: relative;
@@ -1153,6 +1154,7 @@ video{
 .map_location{
     width: 46%;
     height: 203px;
+    padding-bottom: 46%;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
     border-radius: 20px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
