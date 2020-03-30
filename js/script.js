@@ -75,23 +75,24 @@ var menuBack = document.querySelector('.header__menuContent__background');
 
 menuBtn.addEventListener('click', function () {
     headerTop.style.display = 'none';
-    menuOpen.style.left ='0';
-    menuBack.style.display='block';
+    menuOpen.style.left = '0';
+    menuBack.style.display = 'block';
 })
-menuBack.addEventListener('click',function(){
-    headerTop.style.display='block';
+menuBack.addEventListener('click', function () {
+    headerTop.style.display = 'block';
     menuBack.style.display = 'none';
-    menuOpen.style.left ='-100%';
+    menuOpen.style.left = '-100%';
 })
 
 var lastScroll = 0;
 window.addEventListener('scroll', function () {
     var scroll = window.scrollY;
+    if (scroll < 0) { }
     if (scroll > lastScroll) {
-        headerTop.style.display='none';
+        headerTop.style.display = 'none';
     }
     else {
-        headerTop.style.display='block';
+        headerTop.style.display = 'block';
     }
     lastScroll = scroll;
 });
