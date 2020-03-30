@@ -944,6 +944,7 @@ header.bg02{
     box-shadow: none;
     position: relative;
     overflow: hidden;
+
 }
 .lineup__textWrapper{
     width: 90%;
@@ -1004,13 +1005,13 @@ header.bg02{
 }
 .lineup__slider li{
     margin-left:10px;
-    width: 153px;
-    height: 150px;
+    width: 200px;
+    height: 220px;
     position: relative;
 }
 .lineup__slider li a{
-    width: 153px;
-    height: 150px;
+    width: 200px;
+    height: 220px;
     position: absolute;
     filter: none;
     transition: .5s;
