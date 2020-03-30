@@ -259,6 +259,7 @@ header.bg02{
 }
 .board__wrapper div ul li{
     padding-bottom: 13px;
+    display: flex;
 }
 .board__notice ul li a{
     font-size: 1rem;
@@ -267,6 +268,9 @@ header.bg02{
     font-weight: 300;
     letter-spacing: 0.05rem;
     position: relative;
+}
+.board__wrapper .select{
+    margin-left: 10px;
 }
 .board__wrapper .select:after{
     content: '';
@@ -287,14 +291,35 @@ header.bg02{
     letter-spacing: 0;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #f14e65;
+    color: #fff;
     margin-left: 0;
+    position: relative;
+}
+.board__wrapper .pink:after{
+    content: '';
+    position: absolute;
+    top:-10%; left: -5%;
+    z-index: -1;
+    width: 110%;
+    height: 130%;
+    background: #f14e65;
+    border-radius: 5px;
 }
 .board__wrapper .blue{
     font-size: 1.1rem;
     font-weight: bold;
-    color: #4075c5;
+    color: #fff;
     margin-left: 0;
+}
+.board__wrapper .blue:after{
+    content: '';
+    position: absolute;
+    top:-10%; left: -8%;
+    z-index: -1;
+    width: 115%;
+    height: 130%;
+    background: #4075c5;
+    border-radius: 5px;
 }
 .board__information ul{
     width: 411px;
@@ -303,9 +328,10 @@ header.bg02{
 .board__information ul li{
     padding-bottom: 15px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 .board__information ul li a{
-    margin-left: 5px;
     letter-spacing: 0rem;
     position: relative;
     font-family: 'Noto Sans', sans-serif;
@@ -875,7 +901,7 @@ video{
 }
 .board__notice ul li a:nth-of-type(2){
     display: block;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-left: 5px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
@@ -884,6 +910,10 @@ video{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    margin-left: 10px;
+}
+.board__wrapper .select{
+    margin-left: 10px;
 }
 .board__wrapper .select:after{
     content: '';
@@ -905,16 +935,36 @@ video{
     letter-spacing: 0;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #f14e65;
+    color: #fff;
     margin-left: 0;
     padding-left: 15px;
+}
+.board__wrapper .pink:after{
+    content: '';
+    position: absolute;
+    top:-5%; left: 14%;
+    z-index: -1;
+    width: 90%;
+    height: 120%;
+    background: #f14e65;
+    border-radius: 5px;
 }
 .board__wrapper .blue{
     font-size: 1.1rem;
     font-weight: bold;
-    color: #4075c5;
+    color: #fff;
     margin-left: 0;
     padding-left: 15px;
+}
+.board__wrapper .blue:after{
+    content: '';
+    position: absolute;
+    top:-5%; left: 14%;
+    z-index: -1;
+    width: 93%;
+    height: 120%;
+    background: #4075c5;
+    border-radius: 5px;
 }
 .board__information ul{
     width:90%;
@@ -925,6 +975,7 @@ video{
     text-align: center;
 }
 .board__information ul li a{
+    display: block;
     margin: 0 auto;
     letter-spacing: 0rem;
     position: relative;
