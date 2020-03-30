@@ -1089,7 +1089,7 @@ video{
 }
 .map__seeMap{
     display: inline-block;
-    height: 203px;
+    height: 0;
     width: 46%;
     padding-bottom: 46%;
     border-radius: 20px;
@@ -1155,7 +1155,7 @@ video{
 
 .map_location{
     width: 46%;
-    height: 203px;
+    height: 0;
     padding-bottom: 46%;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
     border-radius: 20px;
