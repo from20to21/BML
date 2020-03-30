@@ -258,7 +258,7 @@ footer{
   background: #1e2329;
   position: fixed;
   box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
-  z-index: 20;
+  z-index: 900;
 }
 
 .header__menu__mobile button{
@@ -293,7 +293,7 @@ footer{
   background: #1e2329;
   position: fixed;
   left: -100%;
-  z-index:21;
+  z-index:901;
   transition: .5s;
 }
 .header__menuContent__mobile nav{
