@@ -975,7 +975,6 @@ video{
     text-align: center;
 }
 .board__information ul li a{
-    display: block;
     margin: 0 auto;
     letter-spacing: 0rem;
     position: relative;
