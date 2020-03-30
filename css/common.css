@@ -291,7 +291,6 @@ footer{
   width: 70%;
   height: 100%;
   background: #1e2329;
-  border-bottom-right-radius: 20px;
   position: fixed;
   left: -100%;
   z-index:21;

@@ -758,7 +758,6 @@ video{
 .ticekt__btn a:hover{
     letter-spacing: .8rem;
 }
-
 .board__wrapper{
     width: 90%;
     margin:80px auto;
@@ -768,20 +767,19 @@ video{
 }
 .board__notice{
     width: 99%;
-    box-shadow: none;
     position: relative;
     padding-bottom: 0px;
     float: left;
+    box-shadow:0 0 5px rgba(0,0,0,.3) inset;
     margin-bottom: 10px;
 }
-
 .board__information{
     width: 99%;
-    box-shadow: none;
     position: relative;
     margin-bottom: 10px;
     padding-bottom: 0px;
     float: left;
+    box-shadow:0 0 5px rgba(0,0,0,.3) inset;
 }
 .board__notice:after{
     content: '';
@@ -795,7 +793,7 @@ video{
     transition: .5s;
 }
 .board__notice:hover:after{
-    opacity: 1;
+    opacity: 0;
 }
 .board__information:after{
     content: '';
@@ -809,7 +807,7 @@ video{
     transition: .5s;
 }
 .board__information:hover:after{
-    opacity: 1;
+    opacity: 0;
 }
 .board__title{
     padding-top: 26px;
@@ -820,7 +818,7 @@ video{
 }
 .board__title strong{
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
 .board__title p{
@@ -828,13 +826,12 @@ video{
     padding: 4px;
     font-size: 1.1rem;
     font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 5px;
+    margin-left: 3px;
 }
 .board__title a{
     width: 16px;
     height: 16px;
     padding-top: 10px;
-    /* margin-left: 210px; */
     position: absolute;
     right: 10%;
 }
@@ -863,7 +860,7 @@ video{
     padding-bottom: 13px;
 }
 .board__notice ul li a{
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-left: 5px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
@@ -891,15 +888,17 @@ video{
     font-weight: bold;
     color: #f14e65;
     margin-left: 0;
+    padding-left: 15px;
 }
 .board__wrapper .blue{
     font-size: 1.1rem;
     font-weight: bold;
     color: #4075c5;
     margin-left: 0;
+    padding-left: 15px;
 }
 .board__information ul{
-    width: 411px;
+    width:90%;
     margin: 20px auto;
 }
 .board__information ul li{
@@ -924,7 +923,7 @@ video{
     overflow: hidden;
 }
 .lineup__textWrapper{
-    width: 933px;
+    width: 90%;
     margin: 0 auto;
     padding-top: 36px;
     padding-bottom: 200px;
@@ -998,10 +997,13 @@ video{
 }
 
 .video_map__wrapper{
-    width: 933px;
+    width:100%;
     margin: 100px auto;
     position: relative;
     transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .video_map__wrapper:after{
     content: '';
@@ -1009,13 +1011,15 @@ video{
     clear: both;
 }
 .video__wrapper{
-    width: 649px;
-    height: 365px;
+    width: 90%;
+    margin: 0 auto;
+    height: 200px;
     border-radius: 20px;
     position: relative;
     overflow: hidden;
     float: left;
-    box-shadow: rgba(0,0,0,.5) 6px 5px 20px;
+    box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
+    margin-bottom: 10px;
 }
 video{
     position: absolute;
@@ -1071,13 +1075,17 @@ video{
 
 
 .map__wrapper{
-    float: right;
+    width: 90%;
+    margin: 0 auto;
+    float: left;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .map__seeMap{
     display: inline-block;
-    width: 258px;
+    width: 100%;
     height: 203px;
     border-radius: 20px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
@@ -1140,7 +1148,7 @@ video{
 }
 
 .map_location{
-    width: 258px;
+    width: 100%;
     height: 154px;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
     border-radius: 20px;
