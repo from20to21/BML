@@ -211,19 +211,19 @@ header.bg02{
 
 .board__title{
     padding-top: 26px;
-    padding-left: 25px;
+    padding-left: 17px;
+    padding-bottom: 10px;
     display: flex;
     justify-content: flex-start;
     position: relative;
 }
 .board__title strong{
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-family: 'Noto Sans KR', sans-serif;
 }
 .board__title p{
     font-weight: lighter;
-    padding: 4px;
     font-size: 1.1rem;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 5px;
@@ -260,6 +260,7 @@ header.bg02{
 .board__wrapper div ul li{
     padding-bottom: 13px;
     display: flex;
+    align-items: center;
 }
 .board__notice ul li a{
     font-size: 1rem;
@@ -279,18 +280,18 @@ header.bg02{
     background: #f15166;
     border-radius: 100%;
     position: absolute;
-    top: 20px; right: -12px;
+    top: 10px; right: -12px;
     opacity: 0;
     transition: .3s; 
 }
 .board__wrapper .select:hover:after{
     opacity: 1;
-    top: 10px;
+    top: 0;
 }
 .board__wrapper .pink{
-    letter-spacing: 0;
-    font-size: 1.1rem;
-    font-weight: bold;
+    letter-spacing: 0.05rem;
+    font-size: 0.8rem;
+    font-weight: 400;
     color: #fff;
     margin-left: 0;
     position: relative;
@@ -298,7 +299,7 @@ header.bg02{
 .board__wrapper .pink:after{
     content: '';
     position: absolute;
-    top:-10%; left: -5%;
+    top:-25%; left: -5%;
     z-index: -1;
     width: 110%;
     height: 130%;
@@ -306,15 +307,17 @@ header.bg02{
     border-radius: 5px;
 }
 .board__wrapper .blue{
-    font-size: 1.1rem;
-    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-size: 0.8rem;
+    font-weight: 400;
     color: #fff;
     margin-left: 0;
+    padding-left: 1px;
 }
 .board__wrapper .blue:after{
     content: '';
     position: absolute;
-    top:-10%; left: -8%;
+    top:-25%; left: -8%;
     z-index: -1;
     width: 115%;
     height: 130%;
@@ -328,8 +331,6 @@ header.bg02{
 .board__information ul li{
     padding-bottom: 15px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
 .board__information ul li a{
     letter-spacing: 0rem;
@@ -671,7 +672,6 @@ header.bg02{
     margin: 80px 0;
     display: flex;
     flex-wrap: nowrap; 
-    /* overflow: scroll;     */
     overflow-x: scroll;
 }
 .banner__wrapper a{
@@ -1060,7 +1060,7 @@ header.bg02{
     width: 153px;
     height: 150px;
     position: absolute;
-    filter: grayscale();
+    filter: none;
     transition: .5s;
 }
 .lineup__slider li a:hover{
