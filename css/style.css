@@ -998,7 +998,7 @@ video{
 
 .video_map__wrapper{
     width:100%;
-    margin: 100px auto;
+    margin: 100px auto 30px;
     position: relative;
     transition: 1s;
     display: flex;
@@ -1075,17 +1075,17 @@ video{
 
 
 .map__wrapper{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     float: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .map__seeMap{
     display: inline-block;
-    width: 100%;
+    width: 46%;
     height: 203px;
     border-radius: 20px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
@@ -1099,21 +1099,22 @@ video{
     border-radius: 20px;
     color: #fff;
     font-weight: bold;
-    font-size: 28px;
+    font-size: 1.6rem;
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1.667rem;
     position: absolute;
     top: 50%; left: 50%;
     z-index: 3;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
 }
 .map__seeMap strong{
+    width: 100%;
     position: absolute;
-    top: 50%; left: 50%;
+    top:60%; left: 10%;
     z-index: 3;
     color: #fff;
-    transform: translate(-50%, -50%);
+    transform: translate(0, 0);
 }
 .map__seeMap p{
     color: #fff;
@@ -1148,13 +1149,14 @@ video{
 }
 
 .map_location{
-    width: 100%;
-    height: 154px;
+    width: 46%;
+    height: 203px;
     background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
     border-radius: 20px;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
     position: relative;
-    margin-top: 8px;
+    margin-top: 0;
+    margin-left: 10px;
 }
 .map_location a{
     width: 100%;
@@ -1174,7 +1176,7 @@ video{
 .map_location a strong{
     color: #fff;
     position: absolute;
-    top: 30%; left: 10%;
+    top: 60%; left: 10%;
     z-index: 3;
     transform: translate(0, 0);
 }
