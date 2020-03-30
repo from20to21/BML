@@ -270,7 +270,7 @@ header.bg02{
     position: relative;
 }
 .board__wrapper .select{
-    margin-left: 10px;
+    margin-left: 15px;
 }
 .board__wrapper .select:after{
     content: '';
@@ -913,7 +913,7 @@ video{
     margin-left: 10px;
 }
 .board__wrapper .select{
-    margin-left: 10px;
+    margin-left: 15px;
 }
 .board__wrapper .select:after{
     content: '';
