@@ -640,35 +640,44 @@ video{
 
 /* section */
 .banner__wrapper{
-    width: 100%;
+    width: initial;
     height: 181px;
-    margin: 80px auto 80px;
-    display: block; 
-    overflow: hidden;
-    position: relative;
-
+    margin: 80px 0;
+    display: flex;
+    flex-wrap: nowrap; 
+    overflow: scroll;    
 }
 .banner__wrapper a{
-    display: block;
-    width: 100%;
+    width: 80%;
     height: 181px;
     border-radius: 20px;
     box-shadow: none;
-    position: absolute;
-    top:0; left: 0;
     color: #fff;
+    flex: 0 0 auto;
+    margin-left: 10px;
 }
+/* .banner__wrapper{
+    width: 933px;
+    margin: 120px auto 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.banner__wrapper a{
+    width: 303px;
+    height: 181px;
+    border-radius: 20px;
+    box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
+    position: relative;
+    color: #fff;
+} */
 .banner__wrapper a:nth-of-type(1){
-    background: url("../img/ban01.png") no-repeat center;
-    left: -10%;
+    background: url("../img/ban01.png") no-repeat center / 100%;
 }
 .banner__wrapper a:nth-of-type(2){
-    background: url("../img/ban02.png") no-repeat center;
-    left: 70%;
+    background: url("../img/ban02.png") no-repeat center / 100%;
 }
 .banner__wrapper a:nth-of-type(3){
-    background: url("../img/ban03.png") no-repeat center;
-    left: 140%;
+    background: url("../img/ban03.png") no-repeat center / 100%;
 }
 /* .banner__wrapper a:after{
     content: '';
