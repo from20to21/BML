@@ -66,6 +66,7 @@ section>a:after{
 }
 .img__wrapper:last-child{
     margin-bottom: 100px;
+    flex-direction: row-reverse;
 }
 .img__main{
     width: 70%;
@@ -390,6 +391,7 @@ section>a:after{
 }
 .img__wrapper:last-child{
     margin-bottom: 100px;
+    flex-direction: column;
 }
 .img__main{
     width: 100%;
@@ -466,45 +468,44 @@ section>a:after{
 }
 .img__wrapper>i{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.5rem;
     visibility: hidden;
     opacity: 0;
     transition: .8s;
+    color: lightcoral;
 }
 .img__wrapper:hover>i:nth-of-type(1){
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
     z-index: 0;
     transform: translateY(0) rotate(-90deg);
 }
 .img__wrapper:hover>i:nth-of-type(2){
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
     z-index: 0;
     transform: translateY(0) rotate(-90deg);
 }
 .img__wrapper>i:nth-of-type(1){
     position: absolute;
-    bottom:0; left:0;
-    z-index: -1;
-    color: lightcoral;
+    bottom:31%; left:-40%;
+    z-index: 1;
     transform: translateY(-30px) rotate(-90deg);
 }
 .img__wrapper>i:nth-of-type(2){
     position: absolute;
-    bottom:0; right:0;
-    z-index: -1;
-    color: lightcoral;
+    bottom:-15%; right:0;
+    z-index: 0;
     transform: translateY(-30px) rotate(-90deg);
 }
 .img__wrapper:last-child:hover>i:nth-of-type(1){
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
     z-index: 0;
     transform: translateX(0);
 }
 .img__wrapper:last-child:hover>i:nth-of-type(2){
-    visibility: visible;
+    visibility: hidden;
     opacity: 1;
     z-index: 0;
     transform: translateX(0);
@@ -525,14 +526,14 @@ section>a:after{
 }
 
 .img__wrapper:last-child .img__main{
-    width: 68%;
+    width: 100%;
     border-radius: 20px;
     background: url('../img/lineup/lineup02.jpg') no-repeat center/ cover;
     box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
 }
 .img__sub{
     width: initial;
-    height:100%;
+    height:150px;
     display: flex;
     flex-wrap: nowrap;
     margin-left: 0px;
@@ -546,12 +547,13 @@ section>a:after{
     display: none;
 }
 .img__sub a{
-    width: 200px;
+    width: 15%;
     border-radius: 10px;
     margin-left: 3px;
     margin-top: 3px;
     position: relative;
     overflow: hidden;
+    flex: 0 0 auto;
 }
 .img__sub a:before{
     content: '';
@@ -566,7 +568,6 @@ section>a:after{
     transform: translate(-50%,-50%); 
     z-index: 30;
     color: #fff;
-    font-size: 2rem;
     opacity: 0;
 }
 .img__sub a i.active{
@@ -579,7 +580,6 @@ section>a:after{
     transform: translate(-50%,-50%); 
     z-index: 30;
     color: #fff;
-    font-size: 2rem;
     opacity: 1;
     transition: 1s;
 }
@@ -590,7 +590,7 @@ section>a:after{
     transform: translate(-50%,-50%); 
     z-index: 30;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1rem;
     transition: none;
     animation: searchani 1s 0s infinite ease-in-out;
 }
@@ -604,7 +604,7 @@ section>a:after{
     transform: translate(-50%,-50%); 
     z-index: 30;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1rem;
     opacity: 1;
     transition: 1s;
 }
