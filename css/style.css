@@ -686,6 +686,7 @@ header.bg02{
     color: #fff;
     flex: 0 0 auto;
     margin-left: 10px;
+    overflow: hidden;
 }
 
 .banner__wrapper a:nth-of-type(1){
