@@ -387,7 +387,7 @@ section>a:after{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60vh;
+    height: 400px;
     position: relative;
 }
 .img__wrapper:last-child{
