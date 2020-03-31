@@ -359,16 +359,16 @@ section>p{
     /* section */
 
 section{
-    width: 70%;
+    width: 95%;
     margin: 0 auto;
     position: relative;
-    height: 900px;
+    height: 800px;
 }
 section>h3{
     text-align: center;
     line-height: 40px;
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     font-weight: 600;
     margin-top: 100px;
     margin-bottom: 10px;
@@ -385,22 +385,25 @@ section>p{
 
 .map__wrapper{
     width: 100%;
-    height: 600px;
+    height: initial;
     background: #3424c3;
     border-radius: 0 10px 10px 10px;
     position: relative;
     z-index: 4;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 30px;
 }
 .map__text{
     position: relative;
     float: left;
-    width: 40%;
+    width:100%;
 }
 .map__way{
-    height: 600px;
+    height: initial;
     overflow: hidden;    
-    padding-top: 140px;
-    padding-left: 30px;
+    padding-top: 50px;
+    padding-left: 10px;
 }
 .map__way img{
     display: block;
@@ -445,10 +448,10 @@ section>p{
 
 
 .map__stage{
-    height: 600px;
+    height: initial;
     overflow: hidden;
-    padding-top: 140px;
-    padding-left: 30px;
+    padding-top: 50px;
+    padding-left: 10px;
 }
 .map__stage img{
     display: block;
@@ -511,10 +514,10 @@ section>p{
     margin-left: 8px;
 }
 .map__parking{
-    height: 600px;
+    height: initial;
     overflow: hidden;
-    padding-top: 60px;
-    padding-left: 30px;
+    padding-top: 50px;
+    padding-left: 10px;
 }
 .map__parking strong{
     color: #fff;
@@ -567,12 +570,11 @@ section>p{
 }
 
 .map__image{
-    width:60%;
-    height: 600px;
+    width:100%;
+    height: 250px;
     float: right;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    padding-right: 35px;
+    display: none;
 }
 .map__image img{
     width: 90%;
