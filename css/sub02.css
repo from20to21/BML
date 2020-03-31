@@ -144,6 +144,7 @@ section>a:after{
 .img__wrapper>i{
     color: #fff;
     font-size: 2rem;
+    display: none;
     visibility: hidden;
     opacity: 0;
     transition: .8s;
@@ -541,7 +542,7 @@ section>a:after{
     scrollbar-width: none;
 }
 .img__wrapper:last-child .img__sub{
-    margin-right: 10px;
+    margin-right: 0;
 }
 .img__sub::-webkit-scrollbar{
     display: none;
