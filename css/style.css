@@ -674,6 +674,7 @@ header.bg02{
     display: flex;
     flex-wrap: nowrap; 
     overflow-x: scroll;
+    scrollbar-width: none;
 }
 .banner__wrapper::-webkit-scrollbar{
     display: none;
@@ -853,6 +854,9 @@ header.bg02{
     font-weight: 300;
     letter-spacing: 0.05rem;
     position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 .board__notice ul li a:after{
     content: '';

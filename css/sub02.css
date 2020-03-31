@@ -100,6 +100,7 @@ section>a:after{
     z-index: 10;
     opacity: 0;
     overflow: auto;
+    scrollbar-width: none;
 }
 .img__content.active{
     opacity: 1;
@@ -150,13 +151,13 @@ section>a:after{
     visibility: visible;
     opacity: 1;
     z-index: 0;
-    transform: translateX(10px);
+    transform: translateX(0);
 }
 .img__wrapper:hover>i:nth-of-type(2){
     visibility: visible;
     opacity: 1;
     z-index: 0;
-    transform: translateX(10px);
+    transform: translateX(0);
 }
 .img__wrapper>i:nth-of-type(1){
     position: absolute;
@@ -171,16 +172,6 @@ section>a:after{
     z-index: -1;
     color: lightcoral;
     transform: translateX(-30px);
-}
-.img__wrapper>i:nth-of-type(3){
-    position: absolute;
-    top:0; right: 0;
-    visibility: hidden;
-}
-.img__wrapper>i:nth-of-type(4){
-    position: absolute;
-    bottom: 0; right: 0;
-    visibility: hidden;
 }
 .img__wrapper:last-child:hover>i:nth-of-type(1){
     visibility: visible;
@@ -208,16 +199,7 @@ section>a:after{
     color: lightcoral;
     transform: translateX(30px);
 }
-.img__wrapper:last-child>i:nth-of-type(3){
-    position: absolute;
-    top:0; left: 0;
-    visibility: hidden;
-}
-.img__wrapper:last-child>i:nth-of-type(4){
-    position: absolute;
-    bottom: 0; left: 0;
-    visibility: hidden;
-}
+
 .img__wrapper:last-child .img__main{
     width: 68%;
     border-radius: 20px;
@@ -231,6 +213,7 @@ section>a:after{
     flex-wrap: wrap;
     margin-left: 10px;
     overflow: auto;
+    scrollbar-width: none;
 }
 .img__wrapper:last-child .img__sub{
     margin-right: 10px;
@@ -325,4 +308,321 @@ section>a:after{
 
 @media (max-width:768px){}
 
-@media (max-width:480px){}
+@media (max-width:480px){
+.header__title__mobile h2{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 200px;
+    font-weight: 600;
+    font-size: 2.3em;
+    line-height: 1.4em;
+    word-break: keep-all;
+    color:#fff;
+}
+    .header__title__mobile p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    font-size: 1.6em;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color:#fff;
+}
+header{
+    background: url("../img/subbackimg_02.jpg") no-repeat center 100% / cover;
+    position: relative;
+    box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
+    background-attachment: fixed;
+}
+.header__wrapper nav a:nth-of-type(2):after{
+    width: 100%;
+    opacity: 1;
+}
+/* header-end */
+
+/* */
+section{
+    width:94%;
+    margin: 0 auto;
+}
+section>h3{
+    line-height: 50px;
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding-top: 100px;
+}
+section>a{
+    display: block;
+    width: 25%;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    margin: 20px 0;
+    position: relative;
+    color: #fff;
+    margin-left: 5px;
+}
+section>a:nth-of-type(2){
+    margin-left: 72%;
+    margin-top: 60px;
+}
+section>a:after{
+    content: '';
+    display: block;
+    width: 100%;
+    padding: 5px;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(237, 47, 86), rgb(246, 116, 119));
+    border-radius: 10px;
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 1;
+}
+.img__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+    position: relative;
+}
+.img__wrapper:last-child{
+    margin-bottom: 100px;
+}
+.img__main{
+    width: 100%;
+    height:600px;
+    border-radius: 20px;
+    background: url('../img/lineup/lineup01.jpg') no-repeat center/ cover;
+    box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
+    position: relative;
+}
+.img__wrapper:nth-of-type(1) .img__main a{
+    position: absolute;
+    top: 3%; left: 2%;
+    z-index: 30;
+    display: none;
+}
+.img__wrapper:nth-of-type(2) .img__main a{
+    position: absolute;
+    top: 3%; right: 2%;
+    z-index: 30;
+    display: none;
+}
+.img__main a img{
+    width: 25px;
+}
+.img__content{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    opacity: 0;
+    overflow: auto;
+}
+.img__content.active{
+    opacity: 1;
+    transition: .5s;
+}
+.img__content::-webkit-scrollbar{
+    display: none;
+}
+.img__content h3{
+    color:#fff;
+    font-weight: 600;
+    font-size: 2rem;
+    padding-left: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    padding-top: 5vw;
+    word-break: keep-all;
+}
+.img__content p{
+    width: 90%;
+    margin: 0 auto;
+    color:#fff;
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    padding-top: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-indent: 10px;
+    text-align: center;
+}
+#text_f{
+    text-align: left;
+}
+#text_s{
+    text-align: left;
+}
+.img__content p:last-child{
+    padding-bottom: 60px;
+}
+.img__wrapper>i{
+    color: #fff;
+    font-size: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: .8s;
+}
+.img__wrapper:hover>i:nth-of-type(1){
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
+    transform: translateY(0) rotate(-90deg);
+}
+.img__wrapper:hover>i:nth-of-type(2){
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
+    transform: translateY(0) rotate(-90deg);
+}
+.img__wrapper>i:nth-of-type(1){
+    position: absolute;
+    bottom:0; left:0;
+    z-index: -1;
+    color: lightcoral;
+    transform: translateY(-30px) rotate(-90deg);
+}
+.img__wrapper>i:nth-of-type(2){
+    position: absolute;
+    bottom:0; right:0;
+    z-index: -1;
+    color: lightcoral;
+    transform: translateY(-30px) rotate(-90deg);
+}
+.img__wrapper:last-child:hover>i:nth-of-type(1){
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
+    transform: translateX(0);
+}
+.img__wrapper:last-child:hover>i:nth-of-type(2){
+    visibility: visible;
+    opacity: 1;
+    z-index: 0;
+    transform: translateX(0);
+}
+.img__wrapper:last-child>i:nth-of-type(1){
+    position: absolute;
+    top:0; left: -20px;
+    z-index: -1;
+    color: lightcoral;
+    transform: translateX(30px);
+}
+.img__wrapper:last-child>i:nth-of-type(2){
+    position: absolute;
+    bottom: 0; left: -20px;
+    z-index: -1;
+    color: lightcoral;
+    transform: translateX(30px);
+}
+
+.img__wrapper:last-child .img__main{
+    width: 68%;
+    border-radius: 20px;
+    background: url('../img/lineup/lineup02.jpg') no-repeat center/ cover;
+    box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
+}
+.img__sub{
+    width: initial;
+    height:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 0px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.img__wrapper:last-child .img__sub{
+    margin-right: 10px;
+}
+.img__sub::-webkit-scrollbar{
+    display: none;
+}
+.img__sub a{
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 3px;
+    margin-top: 3px;
+    position: relative;
+    overflow: hidden;
+}
+.img__sub a:before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.img__sub i{
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0;
+}
+.img__sub a i.active{
+    width: 130%;
+    height: 130%;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 1;
+    transition: 1s;
+}
+.img__sub a i.active::before{
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    transition: none;
+    animation: searchani 1s 0s infinite ease-in-out;
+}
+.img__sub a:hover i{
+    width: 130%;
+    height: 130%;
+    background: rgba(0,0,0,.5);
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 1;
+    transition: 1s;
+}
+.img__sub a:hover i::before{
+    border-radius: 10px;
+    position: absolute;
+    left:50%; top: 50%;
+    transform: translate(-50%,-50%); 
+    z-index: 30;
+    color: #fff;
+    font-size: 2rem;
+    transition: none;
+    animation: searchani 1s 0s infinite ease-in-out;
+}
+@keyframes searchani{
+    0%{top:50%}
+    50%{top: 53%;}
+    100%{top: 50%;}
+}
+
+}

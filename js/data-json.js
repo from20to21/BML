@@ -4,7 +4,7 @@
 
 var xhr = new XMLHttpRequest();                 // Create XMLHttpRequest object
 
-xhr.onload = function () {                       // When readystate changes
+xhr.addEventListener('load', function () {                       // When readystate changes
   // The following conditional check will not work locally - only on a server
   //if(xhr.status === 200) {                      // If server status was ok
   responseObject = JSON.parse(xhr.responseText);
@@ -85,13 +85,10 @@ xhr.onload = function () {                       // When readystate changes
     insta_second.innerHTML = responseObject.second[hrefNum].instagram;
   }
 
-
-};
+  funSub02();
+});
 
 xhr.open('GET', 'data.json', true);        // Prepare the request
 xhr.send(null);                                 // Send the request
 
-// When working locally in Firefox, you may see an error saying that the JSON is not well-formed.
-// This is because Firefox is not reading the correct MIME type (and it can safely be ignored).
 
-// If you get it on a server, you may need to se the MIME type for JSON on the server (application/JSON).
