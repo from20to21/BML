@@ -46,8 +46,8 @@ function funSub02() {
         var locationFirst = wrapper[0].offsetTop - 300;
         var locationSecond = wrapper[1].offsetTop - 300;
         var sublocationFirst = wrapper_first[hrefNum].offsetTop;
-        var imgname_f = wrapper_first[hrefNum].style.backgroundImage;
-        var imgname_s = wrapper_second[hrefNum].style.backgroundImage;
+        var imgname_f = wrapper_first[hrefNum].style.backgroundImage.replace("lineup_thum", "lineup");
+        var imgname_s = wrapper_second[hrefNum].style.backgroundImage.replace("lineup_thum", "lineup");
         emoticon_f = wrapper_first[hrefNum].querySelector('i');
         emoticon_s = wrapper_second[hrefNum].querySelector('i');
         if (hrefDay == 'f') {
@@ -79,7 +79,7 @@ function funSub02() {
                 emoticon3[j].classList.remove('active');
             }
             emoticon2.classList.add('active');
-            var imgname = this.style.backgroundImage;
+            var imgname = this.style.backgroundImage.replace("lineup_thum", "lineup");
             mainimg[0].style = "background:" + imgname + " no-repeat center / cover;";
         });
     }
@@ -107,7 +107,7 @@ function funSub02() {
                 emoticon3[j].classList.remove('active');
             }
             emoticon2.classList.add('active');
-            var imgname = this.style.backgroundImage;
+            var imgname = this.style.backgroundImage.replace("lineup_thum", "lineup");
             mainimg[1].style = "background:" + imgname + " no-repeat center / cover;";
         });
     }

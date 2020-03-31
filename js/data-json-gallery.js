@@ -29,16 +29,16 @@ xhr.onload = function () {                       // When readystate changes
     //     firstContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     // }
     for (var i = 0; i < 20; i++) { // Loop through object
-        firstContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+        firstContent += '<a href="" class="active" style="background: url(../img/trailer_thum/' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
     for (var i = 20; i < 30; i++) { // Loop through object
-        secondContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+        secondContent += '<a href="" class="active" style="background: url(../img/trailer_thum/' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
     for (var i = 30; i < 40; i++) { // Loop through object
-        thirdContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+        thirdContent += '<a href="" class="active" style="background: url(../img/trailer_thum/' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
     for (var i = 40; i < responseObject.G2019.length; i++) { // Loop through object
-        fourthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
+        fourthContent += '<a href="" class="active" style="background: url(../img/trailer_thum/' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
     // for (var i = 51; i < 52; i++) { // Loop through object
     //     fifthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'

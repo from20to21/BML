@@ -64,7 +64,7 @@ window.addEventListener('load', function () {
             extend = document.querySelector('.extended');
             extendimg = extend.querySelector('img');
 
-            url = this.style.backgroundImage;
+            url = this.style.backgroundImage.replace("trailer_thum", "trailer");
             if (url == lasturl) { //같은애 클릭하면 닫히게
                 close();
             }
@@ -92,7 +92,7 @@ window.addEventListener('load', function () {
                 if (k < 0) {
                     k = 0;
                 }
-                prevUrl = thumbnail[k].style.backgroundImage;
+                prevUrl = thumbnail[k].style.backgroundImage.replace("trailer_thum", "trailer");;
                 extendimg.src = prevUrl.split('"')[1];
 
                 spanAll[k].style.display = 'block';
@@ -114,7 +114,7 @@ window.addEventListener('load', function () {
                 if (k >= thumbnail.length) {
                     k = thumbnail.length - 1;
                 }
-                nextUrl = thumbnail[k].style.backgroundImage;
+                nextUrl = thumbnail[k].style.backgroundImage.replace("trailer_thum", "trailer");;
                 extendimg.src = nextUrl.split('"')[1];
                 spanAll[k].style.display = 'block';
                 move();
