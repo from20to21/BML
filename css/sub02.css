@@ -387,7 +387,7 @@ section>a:after{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 50vh;
+    height: 60vh;
     position: relative;
 }
 .img__wrapper:last-child{
@@ -396,7 +396,7 @@ section>a:after{
 }
 .img__main{
     width: 100%;
-    height:600px;
+    height:800px;
     border-radius: 20px;
     background: url('../img/lineup/lineup01.jpg') no-repeat center/ cover;
     box-shadow: rgba(0,0,0,.2) 2px 1px 10px;
