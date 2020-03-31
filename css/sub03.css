@@ -175,25 +175,26 @@ header{
     width: 100%;
     opacity: 1;
 }
+.header__title__mobile h2{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 200px;
+    font-weight: 600;
+    font-size: 2.5em;
+    line-height: 1.4em;
+    word-break: keep-all;
+    color:#fff;
+  }
+  .header__title__mobile p{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 100;
+    font-size: 1.6em;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color:#fff;
+  }
 /* header-end */
-    .header__title__mobile h2{
-        width: 80%;
-        margin: 0 auto;
-        padding-top: 200px;
-        font-weight: 600;
-        font-size: 2.5em;
-        line-height: 1.4em;
-        word-break: keep-all;
-        color:#fff;
-      }
-      .header__title__mobile p{
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 100;
-        font-size: 1.6em;
-        padding-bottom: 30px;
-        padding-top: 10px;
-        color:#fff;
-      }
+
     /* section */
     section{
         position: relative;
