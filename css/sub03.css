@@ -186,18 +186,18 @@ section{
         position: relative;
     }
     .ticket__nav{
-        width: 600px;
-        margin: 130px auto 70px;
+        width: 95%;
+        margin: 100px auto 70px;
         display: flex;
         justify-content: center;
     }
     .ticket__nav a{
         line-height: 30px;
         font-family: 'Noto Sans KR', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         font-weight: 600;
         text-align: center;
-        padding: 0 80px;
+        padding: 0 30px;
         border-left: 1px solid rgba(0,0,0,.4);
         border-right: 1px solid rgba(0,0,0,.1);
     }
