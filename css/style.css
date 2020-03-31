@@ -762,7 +762,8 @@ header.bg02{
     margin: 0 auto 30px;
     box-shadow: none;
     position: relative;
-    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-bottom: 5px;
 }
 .board__information{
     width: 90%;
