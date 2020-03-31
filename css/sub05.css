@@ -227,7 +227,7 @@ section #img_wrapper a span{
     border-right: 15px solid transparent;
     border-left: 15px solid  transparent;
     position: absolute;
-    bottom: -13%; left: 50%;
+    bottom: -20%; left: 50%;
     transform: translate(-50%,-50%);
     display: none;
 }
