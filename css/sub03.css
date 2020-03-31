@@ -208,7 +208,7 @@ section{
         border-right: none;
     }
     .main__content{
-        width: 1100px;
+        width: 98%;
         margin: 0 auto;
     }
     .main__content:last-child{
@@ -222,20 +222,21 @@ section{
         text-align: center;
         line-height: 40px;
         font-family: 'Noto Sans KR', sans-serif;
-        font-size: 2.6rem;
+        font-size: 2.3rem;
         font-weight: 600;
         margin-bottom: 20px;
     }
     .main__title p{
         text-align: center;
         padding:10px 0;
-        line-height: 1rem;
+        line-height: 1.2rem;
         font-family: 'Noto Sans KR', sans-serif;
         font-size: 0.9rem;
         font-weight: 300;
+        word-break: keep-all;
     }
     .main__ticket{
-        width: 50%;
+        width: 100%;
         padding: 15px 0;
         margin: 50px auto 80px;
         display: flex;
@@ -247,10 +248,10 @@ section{
         text-align: center;
         line-height: 1rem;
         font-family: 'Noto Sans KR', sans-serif;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 500;
         color: #fff;
-        padding: 3px 50px;
+        padding: 3px 30px;
         position: relative;
         border-left: 1px solid rgba(255,255,255,.6);
         border-right: 1px solid rgba(255,255,255,.4);
@@ -266,7 +267,7 @@ section{
     }
     .main__content ul li{
         padding:18px 0 0;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         margin-bottom: 5px;
         text-align: center;
@@ -301,7 +302,7 @@ section{
         word-break: keep-all;
     }
     .main__content ul li:last-child{
-        width: 70%;
+        width: 90%;
     }
     .main__content ul li.active{
         animation: scrollani 2s forwards;
