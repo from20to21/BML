@@ -166,7 +166,7 @@ section{
     /* header */
 
 header{
-    background: url("../img/subbackimg_03.jpg") no-repeat center top / cover;
+    background: url("../img/subbackimg_03.jpg") no-repeat center top / 200% 100%;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
