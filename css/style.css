@@ -669,7 +669,7 @@ header.bg02{
 /* section */
 .banner__wrapper{
     width: initial;
-    height: 181px;
+    height: initial;
     margin: 80px 0;
     display: flex;
     flex-wrap: nowrap; 
