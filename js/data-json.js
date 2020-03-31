@@ -17,7 +17,7 @@ xhr.addEventListener('load', function () {                       // When readyst
   var hrefDay = hash.charAt(1);
 
   for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
-    firstContent += '<a href="" style = "background: url(../' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>'
+    firstContent += '<a href="" style = "background: url(../img/lineup/' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>'
   }
 
   // Update the page with the new content
@@ -54,7 +54,7 @@ xhr.addEventListener('load', function () {                       // When readyst
 
   var secondContent = '';
   for (var i = 0; i < responseObject.second.length; i++) { // Loop through object
-    secondContent += '<a href="" style = "background: url(../' + responseObject.second[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>';
+    secondContent += '<a href="" style = "background: url(../img/lineup/' + responseObject.second[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>';
   }
   document.getElementById('second').innerHTML = secondContent;
 

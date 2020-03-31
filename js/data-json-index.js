@@ -13,7 +13,7 @@ xhr.onload = function () {                       // When readystate changes
     var arr = [];
     var i = 0;
 
-    while (++i <= 12) {
+    while (++i <= 16) {
         var num = Math.ceil(Math.random() * responseObject.first.length - 1);
         check(num);
     }//랜덤수 생성
@@ -33,54 +33,54 @@ xhr.onload = function () {                       // When readystate changes
 
     // for (i = 0; i < responseObject.first.length; i++) { 
     //     if (i < 10) {
-    //         firstContent += '<li><a href="sub/sub02.html#f0' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+    //         firstContent += '<li><a href="sub/sub02.html#f0' + i + '"style="background: url(img/lineup_thum/' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
     //     }
     //     else {
-    //         firstContent += '<li><a href="sub/sub02.html#f' + i + '"style="background: url(' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
+    //         firstContent += '<li><a href="sub/sub02.html#f' + i + '"style="background: url(img/lineup_thum/' + responseObject.first[i].url + ') no-repeat center / cover;"></a></li>'
     //     }
     // }
     // for (i = 0; i < responseObject.second.length; i++) { 
     //     if (i < 10) {
-    //         firstContent += '<li><a href="sub/sub02.html#s0' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+    //         firstContent += '<li><a href="sub/sub02.html#s0' + i + '"style="background: url(img/lineup_thum/' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
     //     }
     //     else {
-    //         firstContent += '<li><a href="sub/sub02.html#s' + i + '"style="background: url(' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
+    //         firstContent += '<li><a href="sub/sub02.html#s' + i + '"style="background: url(img/lineup_thum/' + responseObject.second[i].url + ') no-repeat center / cover;"></a></li>'
     //     }
     // }
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 8; i++) {
         var k = parseInt(arr[i]);
         if (k < 10) {
-            firstContent += '<li><a href="sub/sub02.html#f0' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#f0' + k + '"style="background: url(img/lineup_thum/' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
         }
         else {
-            firstContent += '<li><a href="sub/sub02.html#f' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#f' + k + '"style="background: url(img/lineup_thum/' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
         }
     }
-    for (i = 6; i < 12; i++) {
+    for (i = 8; i < 16; i++) {
         var k = parseInt(arr[i]);
         if (k < 10) {
-            firstContent += '<li><a href="sub/sub02.html#s0' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#s0' + k + '"style="background: url(img/lineup_thum/' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
         }
         else {
-            firstContent += '<li><a href="sub/sub02.html#s' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#s' + k + '"style="background: url(img/lineup_thum/' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
         }
     }
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 8; i++) {
         var k = parseInt(arr[i]);
         if (k < 10) {
-            firstContent += '<li><a href="sub/sub02.html#f0' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#f0' + k + '"style="background: url(img/lineup_thum/' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
         }
         else {
-            firstContent += '<li><a href="sub/sub02.html#f' + k + '"style="background: url(' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#f' + k + '"style="background: url(img/lineup_thum/' + responseObject.first[k].url + ') no-repeat center / cover;"></a></li>'
         }
     }
-    for (i = 6; i < 12; i++) {
+    for (i = 8; i < 16; i++) {
         var k = parseInt(arr[i]);
         if (k < 10) {
-            firstContent += '<li><a href="sub/sub02.html#s0' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#s0' + k + '"style="background: url(img/lineup_thum/' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
         }
         else {
-            firstContent += '<li><a href="sub/sub02.html#s' + k + '"style="background: url(' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
+            firstContent += '<li><a href="sub/sub02.html#s' + k + '"style="background: url(img/lineup_thum/' + responseObject.second[k].url + ') no-repeat center / cover;"></a></li>'
         }
     }
     // Update the page with the new content
