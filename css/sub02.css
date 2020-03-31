@@ -330,7 +330,7 @@ section>a:after{
     color:#fff;
 }
 header{
-    background: url("../img/subbackimg_02.jpg") no-repeat center 100% / cover;
+    background: url("../img/subbackimg_02.jpg") no-repeat center top / 200% 600px;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
