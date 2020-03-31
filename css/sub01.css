@@ -4,7 +4,7 @@
 /* header */
 
 header{
-    background: url("../img/subbackimg_01.jpg") no-repeat center 100% / 200% 600px;
+    background: url("../img/subbackimg_01.jpg") no-repeat center 100% / 200% 100%;
     position: relative;
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
@@ -104,6 +104,19 @@ article p.active{
 @media (max-width:768px){}
 
 @media (max-width:480px){
+    /* header */
+
+header{
+    background: url("../img/subbackimg_01.jpg") no-repeat center top / 200% 100%;
+    position: relative;
+    box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
+    background-attachment: fixed;
+}
+.header__wrapper nav a:nth-of-type(1):after{
+    width: 100%;
+    opacity: 1;
+}
+/* header-end */
     .header__title__mobile h2{
         width: 80%;
         margin: 0 auto;
