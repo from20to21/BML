@@ -762,8 +762,7 @@ header.bg02{
     margin: 0 auto 30px;
     box-shadow: none;
     position: relative;
-    padding-left: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 }
 .board__information{
     width: 90%;
@@ -848,6 +847,8 @@ header.bg02{
     display: flex;
     align-items: center;
 }
+.board__notice ul li{
+}
 .board__notice ul li a{
     font-size: 1rem;
     margin-left: 5px;
@@ -858,6 +859,8 @@ header.bg02{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 .board__notice ul li a:after{
     content: '';
