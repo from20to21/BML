@@ -416,7 +416,7 @@ section>p{
     position: absolute;
     z-index: 3;
     top: 0; left: 0;
-    transform: translate(0,-100%);
+    transform: translate(0,-103%);
     border:2px solid #333;
     border-bottom: none;
     padding-top: 3px;
