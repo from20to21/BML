@@ -222,10 +222,10 @@ section #img_wrapper>a{
 }
 section #img_wrapper a span{
     width: 0px;height: 0px;
-    border-top:5px solid none;
-    border-bottom:5px solid #333;
-    border-right: 5px solid transparent;
-    border-left: 5px solid  transparent;
+    border-top:10px solid none;
+    border-bottom:10px solid #333;
+    border-right: 10px solid transparent;
+    border-left: 10px solid  transparent;
     position: absolute;
     bottom: -20%; left: 50%;
     transform: translate(-50%,-50%);
