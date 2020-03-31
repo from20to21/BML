@@ -534,7 +534,7 @@ section>a:after{
 }
 .img__sub{
     width: initial;
-    height:150px;
+    height:330px;
     display: flex;
     flex-wrap: nowrap;
     margin-left: 0px;
