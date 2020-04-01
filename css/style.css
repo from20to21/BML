@@ -256,12 +256,18 @@ header.bg02{
     align-items: center;
 }
 .board__notice ul li a{
+    width: 90%;
     font-size: 1rem;
     margin-left: 5px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     letter-spacing: 0.05rem;
     position: relative;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 .board__notice ul li a:after{
     content: '';
@@ -295,6 +301,24 @@ header.bg02{
     background: #f14e65;
     border-radius: 5px;
 }
+.board__notice ul li:nth-of-type(1) a span{
+    padding: 0 2px; 
+}
+.board__notice ul li:nth-of-type(1) a span:after{
+    background: #f14e65;
+}
+.board__notice ul li:nth-of-type(2) a span{
+    padding: 0 5px; 
+}
+.board__notice ul li:nth-of-type(2) a span:after{
+    background: #aaa;
+}
+.board__notice ul li:nth-of-type(3) a span{
+    padding: 0 5px; 
+}
+.board__notice ul li:nth-of-type(3) a span:after{
+    background: #aaa;
+}
 .board__notice ul li:nth-of-type(4) a span{
     padding: 0 2px; 
 }
@@ -305,7 +329,7 @@ header.bg02{
     padding: 0 2px; 
 }
 .board__notice ul li:nth-of-type(5) a span:after{
-    background: #4075c5;
+    background: #f14e65;
 }
 .board__notice ul li:nth-of-type(6) a span{
     padding: 0 2px; 
@@ -315,7 +339,8 @@ header.bg02{
 }
 .board__information ul{
     width: 93%;
-    margin: 10px auto;
+    margin: 20px auto;
+    padding-left: 20px;
 }
 .board__information ul li{
     padding-bottom: 15px;
@@ -852,6 +877,7 @@ header.bg02{
 .board__notice ul li{
 }
 .board__notice ul li a{
+    width: 90%;
     font-size: 1rem;
     margin-left: 5px;
     font-family: 'Noto Sans KR', sans-serif;

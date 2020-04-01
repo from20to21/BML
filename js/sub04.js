@@ -7,6 +7,14 @@ scroll.addEventListener('click', function () {
 //스크롤이벤트end
 
 
+function resizeTopIframe(dynheight) {
+    console.log(dynheight);
+    document.getElementById("IframeId").height = parseInt(dynheight) + 10;
+}
+
+
+
+
 var headerTop = document.querySelector('.header__menu__mobile');
 var menuBtn = document.querySelector('.header__menu__mobile button');
 var menuOpen = document.querySelector('.header__menuContent__mobile');
