@@ -33,7 +33,7 @@ scroll.addEventListener('click', function () {
 
 
 function getCurrentScrollPercentage() {
-    return (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    return (window.scrollY || window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100
 }
 
 var li = document.querySelectorAll('li');

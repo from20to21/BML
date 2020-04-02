@@ -1,5 +1,5 @@
 function getCurrentScrollPercentage() {
-    return (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+    return (window.scrollY || window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight)) * 100
 }
 
 var title = document.querySelectorAll('article h3');

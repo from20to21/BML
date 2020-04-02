@@ -36,12 +36,14 @@ window.addEventListener('load', function () {
         window.scrollTo({ top: location, behavior: 'smooth' });
     }
     // console.log(spanAll);
-    for (let k = 0; k < thumbnail.length; k++) {
+    for (var k = 0; k < thumbnail.length; k++) {
         thumbnail[k].addEventListener('click', function (e) {
             e.preventDefault();
             delTriangle();//삼각형 전체 지우기
+            var dataNum = this.getAttribute('data-num');
+            console.log(dataNum);
             span = e.target.childNodes;
-            spanAll[k].style.display = 'block'; // 선택된애 밑에 삼각형 추가
+            spanAll[dataNum].style.display = 'block'; // 선택된애 밑에 삼각형 추가
             extend = document.querySelector('.extended');
             extend.remove();
             bln = true;

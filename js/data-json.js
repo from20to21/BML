@@ -17,7 +17,7 @@ xhr.addEventListener('load', function () {                       // When readyst
   var hrefDay = hash.charAt(1);
 
   for (var i = 0; i < responseObject.first.length; i++) { // Loop through object
-    firstContent += '<a href="" style = "background: url(../img/lineup_thum/' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>'
+    firstContent += '<a href="" data-num=' + i + ' style = "background: url(../img/lineup_thum/' + responseObject.first[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>';
   }
 
   // Update the page with the new content
@@ -30,13 +30,14 @@ xhr.addEventListener('load', function () {                       // When readyst
   var fb_first = wrapper[0].querySelector('#fb_f');
   var insta_first = wrapper[0].querySelector('#insta_f');
 
-  for (let i = 0; i < wrapper_first.length; i++) {
+  for (var i = 0; i < wrapper_first.length; i++) {
     wrapper_first[i].addEventListener('click', function (e) {
       e.preventDefault();
-      h3_first.innerHTML = responseObject.first[i].name;
-      text_first.innerHTML = responseObject.first[i].text;
-      fb_first.innerHTML = responseObject.first[i].facebook;
-      insta_first.innerHTML = responseObject.first[i].instagram;
+      var dataNum = this.getAttribute('data-num');
+      h3_first.innerHTML = responseObject.first[dataNum].name;
+      text_first.innerHTML = responseObject.first[dataNum].text;
+      fb_first.innerHTML = responseObject.first[dataNum].facebook;
+      insta_first.innerHTML = responseObject.first[dataNum].instagram;
     })
   }
 
@@ -54,7 +55,7 @@ xhr.addEventListener('load', function () {                       // When readyst
 
   var secondContent = '';
   for (var i = 0; i < responseObject.second.length; i++) { // Loop through object
-    secondContent += '<a href="" style = "background: url(../img/lineup_thum/' + responseObject.second[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>';
+    secondContent += '<a href="" data-num=' + i + ' style = "background: url(../img/lineup_thum/' + responseObject.second[i].url + ') no-repeat center/ cover;"><i class="fas fa-search"></i></a>';
   }
   document.getElementById('second').innerHTML = secondContent;
 
@@ -64,13 +65,14 @@ xhr.addEventListener('load', function () {                       // When readyst
   var fb_second = wrapper[1].querySelector('#fb_s');
   var insta_second = wrapper[1].querySelector('#insta_s');
 
-  for (let i = 0; i < wrapper_second.length; i++) {
+  for (var i = 0; i < wrapper_second.length; i++) {
     wrapper_second[i].addEventListener('click', function (e) {
       e.preventDefault();
-      h3_second.innerHTML = responseObject.second[i].name;
-      text_second.innerHTML = responseObject.second[i].text;
-      fb_second.innerHTML = responseObject.second[i].facebook;
-      insta_second.innerHTML = responseObject.second[i].instagram;
+      var dataNum = this.getAttribute('data-num');
+      h3_second.innerHTML = responseObject.second[dataNum].name;
+      text_second.innerHTML = responseObject.second[dataNum].text;
+      fb_second.innerHTML = responseObject.second[dataNum].facebook;
+      insta_second.innerHTML = responseObject.second[dataNum].instagram;
     })
   }
   var locationSecond = wrapper[1].offsetTop - 300;

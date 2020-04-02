@@ -151,7 +151,7 @@ header{
     word-break: keep-all;
     color:#fff;
 }
-  .header__title__mobile p{
+.header__title__mobile p{
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 100;
     font-size: 1.6em;
