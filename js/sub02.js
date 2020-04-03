@@ -81,7 +81,7 @@ function funSub02() {
             emoticon2.classList.add('active');
             var imgname = this.style.backgroundImage.replace("lineup_thum", "lineup");
 
-            mainimg[0].style.background = imgname + " no-repeat center / cover;";
+            mainimg[0].style = "background:" + imgname + " no-repeat center / cover;";
         });
     }
     info_f.addEventListener('click', function (e) {
@@ -109,9 +109,10 @@ function funSub02() {
             }
             emoticon2.classList.add('active');
             var imgname = this.style.backgroundImage.replace("lineup_thum", "lineup");
-            mainimg[1].style.background = imgname + " no-repeat center / cover;";
+            mainimg[1].style = "background:" + imgname + " no-repeat center / cover;";
         });
     }
+
     info_s.addEventListener('click', function (e) {
         e.preventDefault();
     });
