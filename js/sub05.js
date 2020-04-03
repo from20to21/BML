@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
             if (bln) {
                 for (var i = 0; i < tr; i++) {
                     for (j = (5 * i); j < (block * (i + 1)); j++) {
-                        if (j == k) {
+                        if (j == dataNum) {
                             var num = (i + 1) * block - 1;
                             if (num > thumbnail.length) {
                                 num = thumbnail.length - 1
