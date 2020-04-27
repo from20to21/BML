@@ -64,20 +64,23 @@ window.addEventListener('load', function () {
 
             extend = document.querySelector('.extended');
             extendimg = extend.querySelector('img');
-
+            var imgname = new Image();
             url = this.style.backgroundImage.replace("trailer_thum", "trailer");
+            imgname.src = url.split('"')[1];
             if (url == lasturl) { //같은애 클릭하면 닫히게
                 close();
             }
             else {
                 extend.style.display = 'flex';
                 move();
-                extendimg.src = url.split('"')[1]; //url따와서 img에 src로 넣어주기
+                imgname.addEventListener('load', function () {
+                    extendimg.src = url.split('"')[1];
+                }); //url따와서 img에 src로 넣어주기
             }
             lasturl = url;
 
             chevron = extend.querySelectorAll('a');
-            chevron[0].addEventListener('click', function (e) {
+            chevron[0].addEventListener('click', function (e) { //이전버튼 클릭시
                 delTriangle();
                 e.preventDefault();
                 dataNum--;
@@ -93,13 +96,17 @@ window.addEventListener('load', function () {
                 if (dataNum < 0) {
                     dataNum = 0;
                 }
-                prevUrl = thumbnail[dataNum].style.backgroundImage.replace("trailer_thum", "trailer");;
-                extendimg.src = prevUrl.split('"')[1];
+                var imgname = new Image();
+                prevUrl = thumbnail[dataNum].style.backgroundImage.replace("trailer_thum", "trailer");
+                imgname.src = prevUrl.split('"')[1];
+                imgname.addEventListener('load', function () {
+                    extendimg.src = prevUrl.split('"')[1];
+                });
 
                 spanAll[dataNum].style.display = 'block';
                 move();
             });
-            chevron[1].addEventListener('click', function (e) {
+            chevron[1].addEventListener('click', function (e) { //다음버튼 클릭시
                 delTriangle();
                 e.preventDefault();
                 dataNum++;
@@ -115,8 +122,12 @@ window.addEventListener('load', function () {
                 if (dataNum >= thumbnail.length) {
                     dataNum = thumbnail.length - 1;
                 }
+                var imgname = new Image();
                 nextUrl = thumbnail[dataNum].style.backgroundImage.replace("trailer_thum", "trailer");;
-                extendimg.src = nextUrl.split('"')[1];
+                imgname.src = nextUrl.split('"')[1];
+                imgname.addEventListener('load', function () {
+                    extendimg.src = nextUrl.split('"')[1];
+                });
                 spanAll[dataNum].style.display = 'block';
                 move();
             });//chevron 구현
