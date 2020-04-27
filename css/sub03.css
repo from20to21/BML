@@ -163,8 +163,8 @@ section{
 @media (max-width:768px){}
 
 @media (max-width:480px){
-    /* header */
-
+    
+/* header */
 header{
     background: url("../img/subbackimg_03.jpg") no-repeat center top / 200% 600px;
     position: relative;

@@ -1,8 +1,7 @@
 @import url('common.css');
 
 
-/* */
-
+/* header */
 header{
     background: url("../img/backimg_01.jpg") no-repeat center 120% / cover;
     position: relative;
@@ -10,7 +9,6 @@ header{
     background-attachment: fixed;
     transition: background-image 1s;
 } 
-/* header는 relative로 -1로 위치시키고 ,이미지 변하는 div를 fixed로 고정시키는 방법으로 수정해야 */
 header.bg00{
     background: url("../img/backimg_01.jpg") no-repeat center 120% / cover;
     position: relative;
@@ -29,7 +27,6 @@ header.bg02{
     box-shadow: rgba(0,0,0,.2) 6px 10px 50px;
     background-attachment: fixed;
 }
-
 .header__wrapper strong{
     color: #fff;
     font-weight: bold;
@@ -45,10 +42,9 @@ header.bg02{
     padding: 100px;
     text-align: left;
 }
-
 /* header-end */
 
-/* section */
+/* banner */
 .banner__wrapper{
     width: 933px;
     margin: 120px auto 80px;
@@ -120,7 +116,9 @@ header.bg02{
 .banner__wrapper a:hover p{
     opacity: 1;
 }
+/* banner end */
 
+/* ticket */
 .ticket__wrapper{
     width: 933px;
     margin: 0px auto;
@@ -161,6 +159,9 @@ header.bg02{
 .ticekt__btn a:hover{
     letter-spacing: .8rem;
 }
+/* ticket end */
+
+/* board */
 .board__wrapper{
     width: 50%;
     margin:80px auto;
@@ -367,7 +368,9 @@ header.bg02{
     opacity: 1;
     top: 5px;
 }
+/* board end */
 
+/* lineup */
 .lineup_wrapper{
     width: 100%;
     box-shadow: rgba(0,0,0,.2) 6px 5px 20px;
@@ -448,7 +451,9 @@ header.bg02{
 .lineup__slider li a:hover{
     filter: none;
 }
+/* lineup end */
 
+/* video&map */
 .video_map__wrapper{
     width: 933px;
     margin: 100px auto;
@@ -651,6 +656,8 @@ video{
     75% { transform: rotate(-5deg); transform-origin:  30px -50px;} 
     100% { } 
  }
+/* video&map end */
+
 .loadImage{
     display: none;
 }
@@ -673,7 +680,6 @@ header{
     background-attachment: fixed;
     transition: background-image 1s;
 }
-/* header는 relative로 -1로 위치시키고 ,이미지 변하는 div를 fixed로 고정시키는 방법으로 수정해야 */
 header.bg00{
     background: url("../img/backimg_01.jpg") no-repeat center top / 200% 600px;
     position: relative;
@@ -736,7 +742,6 @@ header.bg02{
 .banner__wrapper a:hover p{
     opacity: 0;
 }
-/* 모바일에서 hover 안나오도록 수정 */
 
 .ticket__wrapper{
     width: 90%;

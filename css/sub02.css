@@ -2,7 +2,6 @@
 
 
 /* header */
-
 header{
     background: url("../img/subbackimg_02.jpg") no-repeat center 100% / cover;
     position: relative;
@@ -15,7 +14,7 @@ header{
 }
 /* header-end */
 
-/* */
+/* section */
 section{
     width:55%;
     margin: 0 auto;
