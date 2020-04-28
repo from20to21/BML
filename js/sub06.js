@@ -21,7 +21,7 @@ for (var i = 0; i < btn.length; i++) {
 }
 //버튼메뉴 변경용end
 
-
+//지도
 var festivalMap = document.querySelector('.festivalMap');
 var festivalMapBtn = document.querySelector('.map__stage button');
 var festivalMapImage = festivalMap.querySelector('img');
@@ -36,6 +36,7 @@ festivalMap.addEventListener('click', function () {
 closeBtn.addEventListener('click', function () {
     festivalMap.style.display = 'none';
 })
+//지도 end
 
 //스크롤이벤트
 var scroll = document.querySelector('.header__scroll');
@@ -47,7 +48,6 @@ scroll.addEventListener('click', function () {
 
 //메인에서 링크
 var hash = location.hash;
-
 if (hash) {
     var href = window.location.href;
     var hrefDay = hash.charAt(1);
@@ -73,11 +73,11 @@ if (hash) {
 }
 //메인에서 링크 end
 
+//모바일 메뉴
 var headerTop = document.querySelector('.header__menu__mobile');
 var menuBtn = document.querySelector('.header__menu__mobile button');
 var menuOpen = document.querySelector('.header__menuContent__mobile');
 var menuBack = document.querySelector('.header__menuContent__background');
-
 menuBtn.addEventListener('click', function () {
     headerTop.style.display = 'none';
     menuOpen.style.left = '0';
@@ -102,3 +102,4 @@ window.addEventListener('scroll', function () {
     if (scroll <= 0) { headerTop.style.display = 'block' }
     lastScroll = scroll;
 });
+//모바일 메뉴 end

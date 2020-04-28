@@ -15,6 +15,7 @@ function funSub02() {
     var info_s = mainimg[1].querySelector('a');
     var title = document.querySelectorAll('section>a');
 
+    //타이틀 클릭시 초기화면으로 돌아가기
     title[0].addEventListener('click', function (e) {
         e.preventDefault();
         info_f.style.display = "none";
@@ -26,7 +27,6 @@ function funSub02() {
             emoticon3[j].classList.remove('active');
         }
     });
-
     title[1].addEventListener('click', function (e) {
         e.preventDefault();
         info_s.style.display = "none";
@@ -38,7 +38,9 @@ function funSub02() {
             emoticon3[j].classList.remove('active');
         }
     });
+    //타이틀 클릭시 초기화면으로 돌아가기 end
 
+    //메인에서 이미지 클릭해서 들어왔을때 작동 (해당가수 정보 보여주기)
     if (hash) {
         var href = window.location.href;
         var hrefNum = parseInt(href.substr(href.length - 2));
@@ -67,6 +69,9 @@ function funSub02() {
             info_s.style.display = "block";
         }
     }
+    //메인에서 이미지 클릭해서 들어왔을때 작동 end
+
+    //썸네일 클릭시 메인화면에 큰이미지출력 및 내용변경
     for (var i = 0; i < wrapper_first.length; i++) {
         wrapper_first[i].addEventListener('click', function (e) {
             e.preventDefault();
@@ -97,8 +102,6 @@ function funSub02() {
             content_first.classList.remove('active');
         }
     });
-
-
     for (var i = 0; i < wrapper_second.length; i++) {
         wrapper_second[i].addEventListener('click', function (e) {
             e.preventDefault();
@@ -119,7 +122,6 @@ function funSub02() {
             });
         });
     }
-
     info_s.addEventListener('click', function (e) {
         e.preventDefault();
     });
@@ -130,6 +132,8 @@ function funSub02() {
             content_second.classList.remove('active');
         }
     });
+    //썸네일 클릭시 메인화면에 큰이미지출력 및 내용변경 end
+
 
     //스크롤이벤트
     var scroll = document.querySelector('.header__scroll');
@@ -139,46 +143,11 @@ function funSub02() {
     })
     //스크롤이벤트end
 
-    // function summary(n, s) {
-    //     this.name = n,
-    //         this.selec = s,
-    //         this.main = function () {
-    //             return this.name + this.selec;
-    //         },
-    //         this.main = function () {
-    //             return this.name + this.selec;
-    //         }
-    // }
-    // var a = new summary('aaa', 'selector');
-    // console.log(a.name)
-
-
-
-    // 객체로 짜는법
-    // var b = [info_f, content_first, emoticon_f, mainimg[0], sub_first];
-    // var c = ['s3', 's4'];
-
-    // function summary2(n) {
-    //     this[0].style.display = "none";
-    //     this[1].classList.remove('active');
-    //     this[2].classList.remove('active');
-    //     this[3].style = "background: url(../" + "img/lineup/lineup02.jpg" + " no-repeat center / cover;";
-    //     for (var j = 0; j < wrapper_first.length; j++) {
-    //         var emoticon3 = this[4].querySelectorAll('i');
-    //         emoticon3[j].classList.remove('active');
-    //     }
-
-    // }
-
-    // console.log(summary2.call(b, 'img/lineup/lineup02.jpg'));
-    // console.log(summary2.call(c, 'img/lineup/lineup03.jpg'));
-
-
+    //모바일메뉴
     var headerTop = document.querySelector('.header__menu__mobile');
     var menuBtn = document.querySelector('.header__menu__mobile button');
     var menuOpen = document.querySelector('.header__menuContent__mobile');
     var menuBack = document.querySelector('.header__menuContent__background');
-
     menuBtn.addEventListener('click', function () {
         headerTop.style.display = 'none';
         menuOpen.style.left = '0';
@@ -189,7 +158,6 @@ function funSub02() {
         menuBack.style.display = 'none';
         menuOpen.style.left = '-100%';
     })
-
     var lastScroll = 0;
     window.addEventListener('scroll', function () {
         var scroll = window.scrollY;
@@ -203,8 +171,7 @@ function funSub02() {
         if (scroll <= 0) { headerTop.style.display = 'block' }
         lastScroll = scroll;
     });
-
-
+    //모바일메뉴 end
 };
 
 

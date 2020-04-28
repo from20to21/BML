@@ -14,6 +14,7 @@ window.addEventListener('load', function () {
     var bln = true;
     var tr = Math.ceil(thumbnail.length / block);
 
+    //갤러리
     function delTriangle() {
         for (var i = 0; i < spanAll.length; i++) {
             spanAll[i].style.display = 'none';
@@ -61,7 +62,6 @@ window.addEventListener('load', function () {
                 }
                 bln = false;
             } //5단위로 div나오는곳 구현
-
             extend = document.querySelector('.extended');
             extendimg = extend.querySelector('img');
             var imgname = new Image();
@@ -78,7 +78,6 @@ window.addEventListener('load', function () {
                 }); //url따와서 img에 src로 넣어주기
             }
             lasturl = url;
-
             chevron = extend.querySelectorAll('a');
             chevron[0].addEventListener('click', function (e) { //이전버튼 클릭시
                 delTriangle();
@@ -140,8 +139,7 @@ window.addEventListener('load', function () {
         })
     }
 });
-
-//aside로 세부메뉴 만들어줄까 고민중
+//갤러리 end
 
 
 //스크롤이벤트
@@ -152,11 +150,11 @@ scroll.addEventListener('click', function () {
 })
 //스크롤이벤트end
 
+//모바일 메뉴
 var headerTop = document.querySelector('.header__menu__mobile');
 var menuBtn = document.querySelector('.header__menu__mobile button');
 var menuOpen = document.querySelector('.header__menuContent__mobile');
 var menuBack = document.querySelector('.header__menuContent__background');
-
 menuBtn.addEventListener('click', function () {
     headerTop.style.display = 'none';
     menuOpen.style.left = '0';
@@ -167,7 +165,6 @@ menuBack.addEventListener('click', function () {
     menuBack.style.display = 'none';
     menuOpen.style.left = '-100%';
 })
-
 var lastScroll = 0;
 window.addEventListener('scroll', function () {
     var scroll = window.scrollY;
@@ -181,3 +178,4 @@ window.addEventListener('scroll', function () {
     if (scroll <= 0) { headerTop.style.display = 'block' }
     lastScroll = scroll;
 });
+//모바일 메뉴 end
