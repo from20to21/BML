@@ -13,21 +13,11 @@ xhr.onload = function () {                       // When readystate changes
     var secondContent = '';
     var thirdContent = '';
     var fourthContent = '';
-    // var fifthContent = '';
-    // var body = document.body,
-    //     html = document.documentElement;
-    // var height = Math.max(body.scrollHeight, body.offsetHeight,
-    //     html.clientHeight, html.scrollHeight, html.offsetHeight);
-    // window.addEventListener('scroll', function () {
-    //     console.log(height);
-    //     console.log(scrollY);
-    // })
+
     function getCurrentScrollPercentage() {
         return (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
     }
-    // for (var i = 0; i < responseObject.G2019.length; i++) { // Loop through object
-    //     firstContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
-    // }
+
     for (var i = 0; i < 20; i++) { // Loop through object
         firstContent += '<a href="" class="active" data-num=' + i + ' style="background: url(../img/trailer_thum/' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
@@ -40,31 +30,11 @@ xhr.onload = function () {                       // When readystate changes
     for (var i = 40; i < responseObject.G2019.length; i++) { // Loop through object
         fourthContent += '<a href="" class="active" data-num=' + i + ' style="background: url(../img/trailer_thum/' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
     }
-    // for (var i = 51; i < 52; i++) { // Loop through object
-    //     fifthContent += '<a href="" class="active" style="background: url(' + responseObject.G2019[i].url + ') no-repeat center / cover;"><span></span></a>'
-    // }
+
     document.getElementById('img_wrapper').innerHTML += firstContent;
     document.getElementById('img_wrapper').innerHTML += secondContent;
     document.getElementById('img_wrapper').innerHTML += thirdContent;
     document.getElementById('img_wrapper').innerHTML += fourthContent;
-    // document.getElementById('img_wrapper').innerHTML += fifthContent;
-
-
-    // if (window.scrollY >= (thumbnail[10].offsetTop - 400) && window.scrollY <= (thumbnail[10].offsetTop - 390) && bln == false) {
-    //     bln = true;
-    //     document.getElementById('img_wrapper').innerHTML += thirdContent;
-    // }
-
-    // var bln = true;
-
-    // window.addEventListener('scroll', function () {
-    //     var scrollY = getCurrentScrollPercentage();
-    //     console.log(scrollY);
-    //     if (scrollY > 10 && scrollY < 20 && bln == true) {
-    //         bln = false;
-    //         document.getElementById('img_wrapper').innerHTML += secondContent;
-    //     }
-    // });
 
     // Update the page with the new content
 }
